@@ -1,32 +1,50 @@
-[gd_scene load_steps=6 format=3 uid="uid://0dy527qun08k"]
+[gd_scene load_steps=11 format=3 uid="uid://0dy527qun08k"]
 
-[ext_resource type="Texture2D" uid="uid://4vdv2tmwogcs" path="res://Assets/Textures/grass.jpg" id="1_b1csb"]
 [ext_resource type="PackedScene" uid="uid://dv4lm0kcvab24" path="res://Assets/PlayerCharacter/player_character.tscn" id="1_ubtnu"]
+[ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain.gd" id="2_vr7vr"]
+[ext_resource type="Resource" path="res://hterrain/data.hterrain" id="3_2poe4"]
+[ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="4_oagnb"]
+[ext_resource type="Texture2D" uid="uid://bamsf36qd0t23" path="res://Assets/Textures/prototype_scene_slot0_albedo_bump.png" id="5_ux1kt"]
+[ext_resource type="Texture2D" uid="uid://1mcl1swq5u5u" path="res://Assets/Textures/prototype_scene_slot1_albedo_bump.png" id="6_jmt1j"]
+[ext_resource type="Texture2D" uid="uid://bxcjikg7bvdu8" path="res://Assets/Textures/prototype_scene_slot0_normal_roughness.png" id="7_s5hqk"]
+[ext_resource type="Texture2D" uid="uid://c62ka8p0cxrvc" path="res://Assets/Textures/prototype_scene_slot1_normal_roughness.png" id="8_b6xnm"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_vu0mc"]
-margin = 0.0
-size = Vector3(10, 1, 10)
+[sub_resource type="Resource" id="Resource_gy30a"]
+script = ExtResource("4_oagnb")
+mode = 0
+textures = [[ExtResource("5_ux1kt"), ExtResource("6_jmt1j")], [ExtResource("7_s5hqk"), ExtResource("8_b6xnm")]]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t281t"]
-albedo_texture = ExtResource("1_b1csb")
-
-[sub_resource type="QuadMesh" id="QuadMesh_eogx2"]
-size = Vector2(10, 10)
-orientation = 1
+[sub_resource type="Environment" id="Environment_yw0ov"]
+background_mode = 1
+background_color = Color(0.517184, 0.517184, 0.517184, 1)
+fog_enabled = true
+fog_light_color = Color(0.69931, 0.727332, 0.771365, 1)
 
 [node name="PrototypeScene" type="Node3D"]
 
-[node name="Ground" type="StaticBody3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
-shape = SubResource("BoxShape3D_vu0mc")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
-material_override = SubResource("StandardMaterial3D_t281t")
-mesh = SubResource("QuadMesh_eogx2")
-
 [node name="PlayerCharacter" parent="." instance=ExtResource("1_ubtnu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 247.701, 9.35604, 128.259)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.82853, -0.310235, -0.466147, 0.559945, 0.459043, 0.68974, 0, -0.832486, 0.554046, 0, 1, 0)
+transform = Transform3D(0.82853, -0.310235, -0.466147, 0.559945, 0.459043, 0.68974, 0, -0.832486, 0.554046, 229.169, 101, 233.315)
+
+[node name="HTerrain" type="Node3D" parent="."]
+script = ExtResource("2_vr7vr")
+_terrain_data = ExtResource("3_2poe4")
+chunk_size = 32
+collision_enabled = true
+collision_layer = 1
+collision_mask = 1
+shader_type = "Classic4Lite"
+custom_shader = null
+custom_globalmap_shader = null
+texture_set = SubResource("Resource_gy30a")
+render_layers = 1
+cast_shadow = 1
+shader_params/u_ground_uv_scale = 20
+shader_params/u_depth_blending = true
+shader_params/u_triplanar = null
+shader_params/u_tile_reduction = null
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_yw0ov")
