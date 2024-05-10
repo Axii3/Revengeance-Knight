@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://0dy527qun08k"]
+
+[ext_resource type="Texture2D" uid="uid://4vdv2tmwogcs" path="res://Assets/Textures/grass.jpg" id="1_b1csb"]
+[ext_resource type="PackedScene" uid="uid://dv4lm0kcvab24" path="res://Assets/PlayerCharacter/player_character.tscn" id="1_ubtnu"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vu0mc"]
+margin = 0.0
+size = Vector3(10, 1, 10)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t281t"]
+albedo_texture = ExtResource("1_b1csb")
+
+[sub_resource type="QuadMesh" id="QuadMesh_eogx2"]
+size = Vector2(10, 10)
+orientation = 1
+
+[node name="PrototypeScene" type="Node3D"]
+
+[node name="Ground" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+shape = SubResource("BoxShape3D_vu0mc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
+material_override = SubResource("StandardMaterial3D_t281t")
+mesh = SubResource("QuadMesh_eogx2")
+
+[node name="PlayerCharacter" parent="." instance=ExtResource("1_ubtnu")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.82853, -0.310235, -0.466147, 0.559945, 0.459043, 0.68974, 0, -0.832486, 0.554046, 0, 1, 0)
