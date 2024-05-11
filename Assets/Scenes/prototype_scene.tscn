@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://0dy527qun08k"]
+[gd_scene load_steps=23 format=3 uid="uid://0dy527qun08k"]
 
 [ext_resource type="PackedScene" uid="uid://dv4lm0kcvab24" path="res://assets/player_character/player_character.tscn" id="1_ubtnu"]
 [ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain.gd" id="2_vr7vr"]
@@ -17,6 +17,8 @@
 [ext_resource type="PackedScene" uid="uid://dxdiny6ctow3c" path="res://assets/props/Nature/trees/pine_tree.tscn" id="13_y3w2y"]
 [ext_resource type="PackedScene" uid="uid://5vmi1wgoefim" path="res://assets/scenes/castle_kit/tower_segment.tscn" id="16_8bsq2"]
 [ext_resource type="PackedScene" uid="uid://djb5jn33c8jdk" path="res://assets/scenes/castle_kit/gate_segment.tscn" id="16_c6rqr"]
+[ext_resource type="PackedScene" uid="uid://dnjoh0k0umes7" path="res://assets/scenes/castle_kit/wall_segment.tscn" id="17_7qqfl"]
+[ext_resource type="PackedScene" uid="uid://lvcrl0bxu5vk" path="res://assets/scenes/castle_kit/door.tscn" id="19_87el7"]
 
 [sub_resource type="Resource" id="Resource_gy30a"]
 script = ExtResource("4_oagnb")
@@ -116,12 +118,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 243.258, -7.0127, 107.897)
 
 [node name="pine_tree12" parent="Trees" instance=ExtResource("13_y3w2y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 247.332, -5.32398, 101.179)
-
-[node name="pine_tree13" parent="Trees" instance=ExtResource("13_y3w2y")]
-transform = Transform3D(0.515358, 0, 1.03365, 0, 1.155, 0, -1.03365, 0, 0.515358, 234.232, 4.58954, 159.612)
-
-[node name="pine_tree14" parent="Trees" instance=ExtResource("13_y3w2y")]
-transform = Transform3D(0.515358, 0, 1.03365, 0, 1.155, 0, -1.03365, 0, 0.515358, 246.362, 6.73036, 164.634)
 
 [node name="forrest_segment" type="Node3D" parent="Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 228.978, -3.8147e-06, 124.547)
@@ -263,9 +259,165 @@ shape = SubResource("BoxShape3D_p1687")
 [node name="Castle" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 245.546, 0, 201.866)
 
+[node name="tower" parent="Castle" instance=ExtResource("16_8bsq2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.1957, 0.624992, -13.9783)
+
+[node name="wall_segment" parent="Castle" instance=ExtResource("17_7qqfl")]
+transform = Transform3D(-0.0619719, 0, 0.998078, 0, 1, 0, -0.998078, 0, -0.0619719, 21.2428, 12.227, -4.21764)
+
+[node name="tower2" parent="Castle" instance=ExtResource("16_8bsq2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.0293, 5.17773, 5.77174)
+
+[node name="door" parent="Castle/tower2" instance=ExtResource("19_87el7")]
+transform = Transform3D(0.636523, 0, -0.771258, 0, 1, 0, 0.771258, 0, 0.636523, 0, 10.0138, 0)
+
+[node name="door2" parent="Castle/tower2" instance=ExtResource("19_87el7")]
+transform = Transform3D(-0.992274, 0, -0.124069, 0, 1, 0, 0.124069, 0, -0.992274, 0, 11.0201, 0)
+
 [node name="gate_segment" parent="Castle" instance=ExtResource("16_c6rqr")]
-transform = Transform3D(0.823978, 0, 0.566622, 0, 1, 0, -0.566622, 0, 0.823978, 23.4743, 11.52, 19.3129)
+transform = Transform3D(0.76892, 0, 0.639345, 0, 1, 0, -0.639345, 0, 0.76892, 14.343, 11.2062, 12.2801)
 metadata/_edit_group_ = true
 
-[node name="tower" parent="." instance=ExtResource("16_8bsq2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 260.777, 7, 227.043)
+[node name="tower3" parent="Castle" instance=ExtResource("16_8bsq2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.71916, 8.19971, 18.7374)
+
+[node name="wall_segment2" parent="Castle" instance=ExtResource("17_7qqfl")]
+transform = Transform3D(0.0868079, 0, 0.996225, 0, 1, 0, -0.996225, 0, 0.0868079, 5.9274, 19.3928, 28.5545)
+
+[node name="tower4" parent="Castle" instance=ExtResource("16_8bsq2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.04713, 14.507, 38.5987)
+
+[node name="wall_segment3" parent="Castle" instance=ExtResource("17_7qqfl")]
+transform = Transform3D(0.963752, 0, 0.266801, 0, 1, 0, -0.266801, 0, 0.963752, -4.4612, 25.6811, 41.4673)
+
+[node name="tower5" parent="Castle" instance=ExtResource("16_8bsq2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.1744, 19.4701, 44.1188)
+
+[node name="tower6" parent="Castle/tower5" instance=ExtResource("16_8bsq2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 19.0943, 0)
+
+[node name="wall_segment4" parent="Castle" instance=ExtResource("17_7qqfl")]
+transform = Transform3D(0.999896, 0, -0.0144508, 0, 1, 0, 0.0144508, 0, 0.999896, -23.9877, 39.8746, 43.972)
+
+[node name="tower6" parent="Castle" instance=ExtResource("16_8bsq2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.0059, 37.2316, 43.8089)
+
+[node name="wall_segment5" parent="Castle" instance=ExtResource("17_7qqfl")]
+transform = Transform3D(0.436488, 0, 0.89971, 0, 1, 0, -0.89971, 0, 0.436488, -38.448, 39.2207, 52.848)
+
+[node name="wall_segment6" parent="Castle" instance=ExtResource("17_7qqfl")]
+transform = Transform3D(0.436488, 0, 0.89971, 0, 1, 0, -0.89971, 0, 0.436488, -45.4318, 39.2207, 67.2433)
+
+[node name="tower7" parent="Castle" instance=ExtResource("16_8bsq2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49.8613, 30.4558, 76.3233)
+
+[node name="wall_segment7" parent="Castle" instance=ExtResource("17_7qqfl")]
+transform = Transform3D(0.976871, 0, -0.213832, 0, 1, 0, 0.213832, 0, 0.976871, -59.3284, 28.0334, 74.3183)
+
+[node name="wall_segment2" parent="Castle/wall_segment7" instance=ExtResource("17_7qqfl")]
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 13, 0)
+
+[node name="wall_segment8" parent="Castle" instance=ExtResource("17_7qqfl")]
+transform = Transform3D(0.976871, 0, -0.213832, 0, 1, 0, 0.213832, 0, 0.976871, -74.9583, 28.0334, 70.897)
+
+[node name="wall_segment2" parent="Castle/wall_segment8" instance=ExtResource("17_7qqfl")]
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 13, 0)
+
+[node name="wall_segment9" parent="Castle" instance=ExtResource("17_7qqfl")]
+transform = Transform3D(0.976871, 0, -0.213832, 0, 1, 0, 0.213832, 0, 0.976871, -90.5883, 28.0334, 67.4757)
+
+[node name="wall_segment2" parent="Castle/wall_segment9" instance=ExtResource("17_7qqfl")]
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 13, 0)
+
+[node name="wall_segment10" parent="Castle" instance=ExtResource("17_7qqfl")]
+transform = Transform3D(0.976871, 0, -0.213832, 0, 1, 0, 0.213832, 0, 0.976871, -106.218, 28.0334, 64.0544)
+
+[node name="wall_segment2" parent="Castle/wall_segment10" instance=ExtResource("17_7qqfl")]
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 13, 0)
+
+[node name="tower8" parent="Castle" instance=ExtResource("16_8bsq2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -115.902, 14.3955, 61.8967)
+
+[node name="tower" parent="Castle/tower8" instance=ExtResource("16_8bsq2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 19, 0)
+
+[node name="wall_segment11" parent="Castle" instance=ExtResource("17_7qqfl")]
+transform = Transform3D(0.393926, 0, 0.919142, 0, 1, 0, -0.919142, 0, 0.393926, -112.079, 27.0743, 52.6238)
+
+[node name="wall_segment2" parent="Castle/wall_segment11" instance=ExtResource("17_7qqfl")]
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 13, 0)
+
+[node name="wall_segment12" parent="Castle" instance=ExtResource("17_7qqfl")]
+transform = Transform3D(0.393926, 0, 0.919142, 0, 1, 0, -0.919142, 0, 0.393926, -105.776, 27.0743, 37.9175)
+
+[node name="wall_segment2" parent="Castle/wall_segment12" instance=ExtResource("17_7qqfl")]
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 13, 0)
+
+[node name="wall_segment13" parent="Castle" instance=ExtResource("17_7qqfl")]
+transform = Transform3D(0.393926, 0, 0.919142, 0, 1, 0, -0.919142, 0, 0.393926, -99.4736, 27.0743, 23.2113)
+
+[node name="wall_segment2" parent="Castle/wall_segment13" instance=ExtResource("17_7qqfl")]
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 13, 0)
+
+[node name="tower9" parent="Castle" instance=ExtResource("16_8bsq2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -95.3368, 17.3707, 13.9095)
+
+[node name="tower" parent="Castle/tower9" instance=ExtResource("16_8bsq2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 19, 0)
+
+[node name="wall_segment14" parent="Castle" instance=ExtResource("17_7qqfl")]
+transform = Transform3D(0.116064, 0, 0.993242, 0, 1, 0, -0.993242, 0, 0.116064, -94.2003, 15.6895, 3.81471)
+
+[node name="wall_segment2" parent="Castle/wall_segment14" instance=ExtResource("17_7qqfl")]
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 13, 0)
+
+[node name="wall_segment15" parent="Castle" instance=ExtResource("17_7qqfl")]
+transform = Transform3D(0.116064, 0, 0.993242, 0, 1, 0, -0.993242, 0, 0.116064, -92.3433, 15.6895, -12.0772)
+
+[node name="wall_segment2" parent="Castle/wall_segment15" instance=ExtResource("17_7qqfl")]
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 13, 0)
+
+[node name="wall_segment16" parent="Castle" instance=ExtResource("17_7qqfl")]
+transform = Transform3D(0.116064, 0, 0.993242, 0, 1, 0, -0.993242, 0, 0.116064, -90.4863, 15.6895, -27.969)
+
+[node name="wall_segment2" parent="Castle/wall_segment16" instance=ExtResource("17_7qqfl")]
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 13, 0)
+
+[node name="wall_segment17" parent="Castle" instance=ExtResource("17_7qqfl")]
+transform = Transform3D(0.116064, 0, 0.993242, 0, 1, 0, -0.993242, 0, 0.116064, -88.6293, 15.6895, -43.8609)
+
+[node name="wall_segment2" parent="Castle/wall_segment17" instance=ExtResource("17_7qqfl")]
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 13, 0)
+
+[node name="tower10" parent="Castle" instance=ExtResource("16_8bsq2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -87.5007, 16.9464, -53.9358)
+
+[node name="wall_segment18" parent="Castle" instance=ExtResource("17_7qqfl")]
+transform = Transform3D(-0.937719, 0, 0.347394, 0, 1, 0, -0.347394, 0, -0.937719, -78.0987, 19.2348, -50.5803)
+
+[node name="wall_segment19" parent="Castle" instance=ExtResource("17_7qqfl")]
+transform = Transform3D(-0.937719, 0, 0.347394, 0, 1, 0, -0.347394, 0, -0.937719, -63.0952, 19.2348, -45.022)
+
+[node name="tower11" parent="Castle" instance=ExtResource("16_8bsq2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.6269, 7.90865, -41.4783)
+
+[node name="wall_segment20" parent="Castle" instance=ExtResource("17_7qqfl")]
+transform = Transform3D(-0.999194, 0, -0.0401319, 0, 1, 0, 0.0401319, 0, -0.999194, -43.609, 11.3412, -41.8914)
+
+[node name="wall_segment21" parent="Castle" instance=ExtResource("17_7qqfl")]
+transform = Transform3D(-0.999194, 0, -0.0401319, 0, 1, 0, 0.0401319, 0, -0.999194, -27.6219, 11.3412, -42.5335)
+
+[node name="tower12" parent="Castle" instance=ExtResource("16_8bsq2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.509, 2.78853, -42.9953)
+
+[node name="wall_segment22" parent="Castle" instance=ExtResource("17_7qqfl")]
+transform = Transform3D(-0.974804, 0, 0.223063, 0, 1, 0, -0.223063, 0, -0.974804, -8.09538, 10.3335, -40.7321)
+
+[node name="tower13" parent="Castle" instance=ExtResource("16_8bsq2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.34151, -0.906287, -38.6188)
+
+[node name="wall_segment23" parent="Castle" instance=ExtResource("17_7qqfl")]
+transform = Transform3D(-0.651516, 0, 0.758635, 0, 1, 0, -0.758635, 0, -0.651516, 7.67123, 7.68469, -31.1185)
+
+[node name="wall_segment24" parent="Castle" instance=ExtResource("17_7qqfl")]
+transform = Transform3D(-0.651516, 0, 0.758635, 0, 1, 0, -0.758635, 0, -0.651516, 18.0955, 7.68469, -18.9804)
