@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c62ka8p0cxrvc"
-path.s3tc="res://.godot/imported/prototype_scene_slot1_normal_roughness.png-b69608af3abbdcb18fb2547c2325919e.s3tc.ctex"
+uid="uid://c545vkxis07no"
+path.s3tc="res://.godot/imported/prototype_scene_slot1_normal_roughness.png-27185e560f21299464d8f34502c2f1f3.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Textures/prototype_scene_slot1_normal_roughness.png"
-dest_files=["res://.godot/imported/prototype_scene_slot1_normal_roughness.png-b69608af3abbdcb18fb2547c2325919e.s3tc.ctex"]
+source_file="res://assets/textures/prototype_scene_slot1_normal_roughness.png"
+dest_files=["res://.godot/imported/prototype_scene_slot1_normal_roughness.png-27185e560f21299464d8f34502c2f1f3.s3tc.ctex"]
 
 [params]
 
