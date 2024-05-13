@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://0dy527qun08k"]
+[gd_scene load_steps=37 format=3 uid="uid://0dy527qun08k"]
 
 [ext_resource type="PackedScene" uid="uid://dv4lm0kcvab24" path="res://assets/player_character/player_character.tscn" id="1_ubtnu"]
 [ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain.gd" id="2_vr7vr"]
@@ -19,6 +19,8 @@
 [ext_resource type="PackedScene" uid="uid://djb5jn33c8jdk" path="res://assets/scenes/castle_kit/gate_segment.tscn" id="16_c6rqr"]
 [ext_resource type="PackedScene" uid="uid://dnjoh0k0umes7" path="res://assets/scenes/castle_kit/wall_segment.tscn" id="17_7qqfl"]
 [ext_resource type="PackedScene" uid="uid://lvcrl0bxu5vk" path="res://assets/scenes/castle_kit/door.tscn" id="19_87el7"]
+[ext_resource type="Material" uid="uid://cmse15c3jyh8c" path="res://assets/materials/material_wood.tres" id="20_i0w7p"]
+[ext_resource type="FontFile" uid="uid://d4hiusep38mxq" path="res://assets/fonts/BlackFlag.ttf" id="21_8tu7u"]
 
 [sub_resource type="Resource" id="Resource_gy30a"]
 script = ExtResource("4_oagnb")
@@ -27,7 +29,7 @@ textures = [[ExtResource("5_bcbhd"), ExtResource("6_qnak0"), ExtResource("7_3koh
 
 [sub_resource type="Environment" id="Environment_yw0ov"]
 background_mode = 1
-background_color = Color(0.597884, 0.537768, 0.48025, 1)
+background_color = Color(0.730257, 0.693507, 0.654858, 1)
 fog_enabled = true
 fog_light_color = Color(0.817521, 0.817521, 0.817521, 1)
 adjustment_enabled = true
@@ -35,13 +37,159 @@ adjustment_enabled = true
 [sub_resource type="BoxShape3D" id="BoxShape3D_p1687"]
 size = Vector3(10, 20, 68.1592)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mayah"]
+resource_name = "material_sign"
+cull_mode = 2
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_74rq4"]
+_surfaces = [{
+"aabb": AABB(-0.0951399, -0.0108719, -0.122792, 0.24042, 5.18078, 0.227942),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0, 2, 0, 7, 0, 3, 0, 2, 0, 6, 0, 7, 0, 6, 0, 5, 0, 7, 0, 6, 0, 4, 0, 5, 0, 4, 0, 1, 0, 5, 0, 4, 0, 0, 0, 1, 0, 2, 0, 4, 0, 6, 0, 2, 0, 0, 0, 4, 0, 7, 0, 1, 0, 3, 0, 7, 0, 5, 0, 1, 0),
+"name": "material_sign",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 252, 255, 0, 0, 105, 33, 255, 255, 120, 235, 0, 0, 0, 0, 0, 0, 211, 19, 0, 0, 105, 33, 51, 255, 0, 0, 0, 0, 231, 223, 0, 0, 252, 255, 0, 0, 255, 255, 223, 254, 109, 237, 0, 0, 231, 223, 0, 0, 211, 19, 0, 0, 255, 255, 20, 254, 244, 1, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_u3ofo"]
+resource_name = "Sign_Cube_001"
+_surfaces = [{
+"aabb": AABB(-0.0951399, -0.0108719, -0.122792, 0.24042, 5.18078, 0.227942),
+"attribute_data": PackedByteArray(164, 244, 238, 194, 164, 244, 255, 255, 246, 244, 255, 255, 31, 246, 122, 194, 31, 246, 194, 127, 211, 245, 194, 127, 164, 244, 185, 189, 164, 244, 255, 255, 229, 254, 255, 255, 31, 246, 39, 128, 31, 246, 74, 189, 186, 255, 39, 128, 146, 254, 238, 194, 246, 244, 255, 255, 146, 254, 255, 255, 255, 255, 133, 194, 190, 245, 82, 128, 255, 255, 82, 128, 146, 254, 185, 189, 146, 254, 255, 255, 229, 254, 255, 255, 255, 255, 183, 128, 255, 255, 85, 189, 165, 255, 183, 128),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray(2, 0, 11, 0, 5, 0, 2, 0, 8, 0, 11, 0, 7, 0, 21, 0, 9, 0, 7, 0, 19, 0, 21, 0, 20, 0, 16, 0, 23, 0, 20, 0, 13, 0, 16, 0, 14, 0, 4, 0, 17, 0, 14, 0, 1, 0, 4, 0, 6, 0, 12, 0, 18, 0, 6, 0, 0, 0, 12, 0, 22, 0, 3, 0, 10, 0, 22, 0, 15, 0, 3, 0),
+"material": SubResource("StandardMaterial3D_mayah"),
+"name": "material_sign",
+"primitive": 3,
+"uv_scale": Vector4(1.04629, 1.99626, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 252, 255, 255, 63, 0, 0, 0, 0, 252, 255, 54, 128, 0, 0, 0, 0, 252, 255, 44, 0, 105, 33, 255, 255, 120, 235, 53, 195, 105, 33, 255, 255, 120, 235, 54, 128, 105, 33, 255, 255, 120, 235, 44, 0, 0, 0, 0, 0, 211, 19, 255, 63, 0, 0, 0, 0, 211, 19, 34, 0, 0, 0, 0, 0, 211, 19, 44, 0, 105, 33, 51, 255, 0, 0, 34, 0, 105, 33, 51, 255, 0, 0, 53, 195, 105, 33, 51, 255, 0, 0, 44, 0, 231, 223, 0, 0, 252, 255, 255, 63, 231, 223, 0, 0, 252, 255, 253, 191, 231, 223, 0, 0, 252, 255, 54, 128, 255, 255, 223, 254, 109, 237, 53, 195, 255, 255, 223, 254, 109, 237, 253, 191, 255, 255, 223, 254, 109, 237, 54, 128, 231, 223, 0, 0, 211, 19, 255, 63, 231, 223, 0, 0, 211, 19, 34, 0, 231, 223, 0, 0, 211, 19, 253, 191, 255, 255, 20, 254, 244, 1, 34, 0, 255, 255, 20, 254, 244, 1, 53, 195, 255, 255, 20, 254, 244, 1, 253, 191, 0, 0, 255, 127, 223, 186, 61, 197, 205, 255, 232, 63, 212, 243, 174, 121, 166, 186, 1, 197, 205, 255, 232, 63, 0, 0, 255, 127, 0, 0, 190, 127, 205, 255, 232, 63, 0, 0, 65, 128, 212, 243, 174, 121, 205, 255, 232, 63, 0, 0, 255, 127, 159, 127, 192, 0, 221, 186, 60, 197, 212, 243, 174, 121, 159, 127, 192, 0, 165, 186, 255, 196, 0, 0, 255, 127, 0, 0, 189, 127, 159, 127, 192, 0, 0, 0, 65, 128, 212, 243, 174, 121, 159, 127, 192, 0)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_74rq4")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_hvsar"]
+_surfaces = [{
+"aabb": AABB(-0.300273, 3.90881, 0.0843256, 1.84666, 0.463237, 0.0957985),
+"format": 34896613377,
+"index_count": 60,
+"index_data": PackedByteArray(8, 0, 3, 0, 1, 0, 8, 0, 9, 0, 3, 0, 9, 0, 7, 0, 3, 0, 9, 0, 10, 0, 7, 0, 10, 0, 5, 0, 7, 0, 10, 0, 11, 0, 5, 0, 11, 0, 1, 0, 5, 0, 11, 0, 8, 0, 1, 0, 2, 0, 4, 0, 6, 0, 2, 0, 0, 0, 4, 0, 7, 0, 1, 0, 3, 0, 7, 0, 5, 0, 1, 0, 4, 0, 8, 0, 11, 0, 4, 0, 0, 0, 8, 0, 6, 0, 11, 0, 10, 0, 6, 0, 4, 0, 11, 0, 2, 0, 10, 0, 9, 0, 2, 0, 6, 0, 10, 0, 0, 0, 9, 0, 8, 0, 0, 0, 2, 0, 9, 0),
+"name": "material_sign",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray(41, 3, 178, 11, 147, 246, 0, 0, 213, 2, 255, 255, 255, 255, 0, 0, 83, 0, 21, 7, 139, 49, 0, 0, 0, 0, 98, 251, 247, 58, 0, 0, 106, 216, 156, 4, 74, 198, 0, 0, 22, 216, 232, 248, 182, 207, 0, 0, 149, 213, 0, 0, 67, 1, 0, 0, 65, 213, 76, 244, 174, 10, 0, 0, 255, 2, 216, 133, 73, 251, 0, 0, 41, 0, 60, 129, 65, 54, 0, 0, 41, 253, 199, 122, 0, 0, 0, 0, 255, 255, 99, 127, 7, 197, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_p34xt"]
+resource_name = "Sign_Cube_003"
+_surfaces = [{
+"aabb": AABB(-0.300273, 3.90881, 0.0843256, 1.84666, 0.463237, 0.0957985),
+"attribute_data": PackedByteArray(144, 149, 181, 169, 28, 148, 181, 169, 146, 149, 72, 140, 196, 148, 209, 169, 26, 129, 207, 169, 28, 129, 239, 140, 98, 134, 166, 170, 242, 149, 167, 170, 246, 149, 142, 126, 10, 135, 194, 170, 125, 129, 193, 170, 128, 129, 53, 127, 45, 150, 131, 98, 197, 144, 130, 98, 197, 144, 130, 98, 109, 145, 158, 98, 183, 129, 157, 98, 109, 145, 158, 98, 11, 131, 115, 99, 11, 131, 115, 99, 144, 150, 117, 99, 179, 131, 143, 99, 179, 131, 143, 99, 26, 130, 143, 99, 85, 139, 194, 169, 85, 139, 194, 169, 87, 139, 156, 140, 184, 139, 180, 170, 184, 139, 180, 170, 187, 139, 226, 126, 245, 130, 61, 86, 245, 130, 61, 86, 73, 140, 61, 86, 73, 140, 61, 86, 230, 139, 75, 85, 230, 139, 75, 85, 175, 144, 75, 85, 175, 144, 75, 85),
+"format": 34896613399,
+"index_count": 60,
+"index_data": PackedByteArray(26, 0, 11, 0, 5, 0, 26, 0, 29, 0, 11, 0, 28, 0, 23, 0, 10, 0, 28, 0, 33, 0, 23, 0, 30, 0, 17, 0, 22, 0, 30, 0, 36, 0, 17, 0, 35, 0, 4, 0, 16, 0, 35, 0, 25, 0, 4, 0, 6, 0, 14, 0, 19, 0, 6, 0, 1, 0, 14, 0, 21, 0, 3, 0, 9, 0, 21, 0, 15, 0, 3, 0, 12, 0, 24, 0, 34, 0, 12, 0, 0, 0, 24, 0, 18, 0, 37, 0, 31, 0, 18, 0, 13, 0, 37, 0, 7, 0, 32, 0, 27, 0, 7, 0, 20, 0, 32, 0, 2, 0, 29, 0, 26, 0, 2, 0, 8, 0, 29, 0),
+"material": SubResource("StandardMaterial3D_mayah"),
+"name": "material_sign",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 38,
+"vertex_data": PackedByteArray(41, 3, 178, 11, 147, 246, 252, 191, 41, 3, 178, 11, 147, 246, 126, 45, 41, 3, 178, 11, 147, 246, 240, 48, 213, 2, 255, 255, 255, 255, 55, 216, 213, 2, 255, 255, 255, 255, 251, 191, 213, 2, 255, 255, 255, 255, 240, 48, 83, 0, 21, 7, 139, 49, 126, 45, 83, 0, 21, 7, 139, 49, 8, 0, 83, 0, 21, 7, 139, 49, 240, 48, 0, 0, 98, 251, 247, 58, 55, 216, 0, 0, 98, 251, 247, 58, 42, 0, 0, 0, 98, 251, 247, 58, 240, 48, 106, 216, 156, 4, 74, 198, 251, 191, 106, 216, 156, 4, 74, 198, 12, 23, 106, 216, 156, 4, 74, 198, 126, 45, 22, 216, 232, 248, 182, 207, 55, 216, 22, 216, 232, 248, 182, 207, 252, 191, 22, 216, 232, 248, 182, 207, 231, 237, 149, 213, 0, 0, 67, 1, 12, 23, 149, 213, 0, 0, 67, 1, 126, 45, 149, 213, 0, 0, 67, 1, 8, 0, 65, 213, 76, 244, 174, 10, 55, 216, 65, 213, 76, 244, 174, 10, 231, 237, 65, 213, 76, 244, 174, 10, 42, 0, 255, 2, 216, 133, 73, 251, 252, 191, 255, 2, 216, 133, 73, 251, 251, 191, 255, 2, 216, 133, 73, 251, 240, 48, 41, 0, 60, 129, 65, 54, 8, 0, 41, 0, 60, 129, 65, 54, 42, 0, 41, 0, 60, 129, 65, 54, 240, 48, 41, 253, 199, 122, 0, 0, 231, 237, 41, 253, 199, 122, 0, 0, 12, 23, 41, 253, 199, 122, 0, 0, 8, 0, 41, 253, 199, 122, 0, 0, 42, 0, 255, 255, 99, 127, 7, 197, 251, 191, 255, 255, 99, 127, 7, 197, 252, 191, 255, 255, 99, 127, 7, 197, 231, 237, 255, 255, 99, 127, 7, 197, 12, 23, 17, 128, 163, 126, 49, 41, 18, 215, 49, 89, 129, 166, 98, 172, 14, 172, 93, 128, 236, 126, 49, 89, 129, 166, 49, 41, 18, 215, 84, 64, 164, 191, 49, 89, 129, 166, 98, 172, 14, 172, 66, 64, 182, 191, 49, 89, 129, 166, 17, 128, 163, 126, 63, 27, 86, 204, 49, 41, 18, 215, 98, 172, 14, 172, 93, 128, 236, 126, 219, 179, 13, 160, 63, 27, 86, 204, 49, 41, 18, 215, 84, 64, 164, 191, 98, 172, 14, 172, 219, 179, 13, 160, 66, 64, 183, 191, 17, 128, 163, 126, 93, 128, 236, 126, 49, 89, 129, 166, 84, 64, 164, 191, 66, 64, 183, 191, 49, 89, 129, 166, 219, 179, 13, 160, 63, 27, 86, 204, 84, 64, 164, 191, 66, 64, 183, 191, 17, 128, 163, 126, 93, 128, 236, 126, 219, 179, 13, 160, 63, 27, 86, 204)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_hvsar")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_f4bkv"]
+_surfaces = [{
+"aabb": AABB(-0.214869, 4.51429, 0.087361, 1.85132, 0.529373, 0.0855138),
+"format": 34896613377,
+"index_count": 60,
+"index_data": PackedByteArray(8, 0, 3, 0, 1, 0, 8, 0, 9, 0, 3, 0, 9, 0, 7, 0, 3, 0, 9, 0, 10, 0, 7, 0, 10, 0, 5, 0, 7, 0, 10, 0, 11, 0, 5, 0, 11, 0, 1, 0, 5, 0, 11, 0, 8, 0, 1, 0, 2, 0, 4, 0, 6, 0, 2, 0, 0, 0, 4, 0, 7, 0, 1, 0, 3, 0, 7, 0, 5, 0, 1, 0, 4, 0, 8, 0, 11, 0, 4, 0, 0, 0, 8, 0, 6, 0, 11, 0, 10, 0, 6, 0, 4, 0, 11, 0, 2, 0, 10, 0, 9, 0, 2, 0, 6, 0, 10, 0, 0, 0, 9, 0, 8, 0, 0, 0, 2, 0, 9, 0),
+"name": "material_sign",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray(8, 3, 100, 42, 247, 255, 0, 0, 181, 4, 255, 255, 163, 245, 0, 0, 0, 0, 59, 32, 78, 62, 0, 0, 173, 1, 213, 245, 250, 51, 0, 0, 136, 215, 41, 10, 107, 205, 0, 0, 54, 217, 195, 223, 24, 195, 0, 0, 128, 212, 0, 0, 194, 11, 0, 0, 46, 214, 154, 213, 110, 1, 0, 0, 222, 3, 49, 149, 205, 250, 0, 0, 214, 0, 8, 139, 36, 57, 0, 0, 246, 252, 152, 102, 0, 0, 0, 0, 255, 255, 193, 112, 169, 193, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_03vv4"]
+resource_name = "Sign_Cube_004"
+_surfaces = [{
+"aabb": AABB(-0.214869, 4.51429, 0.087361, 1.85132, 0.529373, 0.0855138),
+"attribute_data": PackedByteArray(123, 148, 177, 179, 49, 148, 175, 179, 32, 149, 140, 142, 70, 123, 144, 178, 109, 147, 251, 178, 235, 123, 84, 141, 169, 149, 246, 180, 137, 133, 175, 180, 148, 150, 238, 127, 196, 132, 250, 179, 116, 124, 214, 179, 95, 125, 182, 126, 206, 153, 3, 92, 228, 145, 224, 91, 228, 145, 224, 91, 153, 128, 226, 90, 31, 145, 44, 91, 31, 145, 44, 91, 59, 131, 224, 92, 252, 154, 73, 93, 59, 131, 224, 92, 118, 130, 43, 92, 118, 130, 43, 92, 198, 129, 40, 92, 225, 135, 32, 179, 225, 135, 32, 179, 133, 136, 240, 141, 14, 137, 102, 180, 14, 137, 102, 180, 249, 137, 82, 127, 161, 130, 39, 76, 161, 130, 39, 76, 41, 143, 95, 76, 41, 143, 95, 76, 251, 141, 25, 75, 251, 141, 25, 75, 74, 145, 40, 75, 74, 145, 40, 75),
+"format": 34896613399,
+"index_count": 60,
+"index_data": PackedByteArray(26, 0, 11, 0, 5, 0, 26, 0, 29, 0, 11, 0, 28, 0, 23, 0, 10, 0, 28, 0, 33, 0, 23, 0, 30, 0, 17, 0, 22, 0, 30, 0, 36, 0, 17, 0, 35, 0, 3, 0, 15, 0, 35, 0, 25, 0, 3, 0, 7, 0, 14, 0, 20, 0, 7, 0, 1, 0, 14, 0, 21, 0, 4, 0, 9, 0, 21, 0, 16, 0, 4, 0, 12, 0, 24, 0, 34, 0, 12, 0, 0, 0, 24, 0, 18, 0, 37, 0, 31, 0, 18, 0, 13, 0, 37, 0, 6, 0, 32, 0, 27, 0, 6, 0, 19, 0, 32, 0, 2, 0, 29, 0, 26, 0, 2, 0, 8, 0, 29, 0),
+"material": SubResource("StandardMaterial3D_mayah"),
+"name": "material_sign",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 38,
+"vertex_data": PackedByteArray(8, 3, 100, 42, 247, 255, 75, 191, 8, 3, 100, 42, 247, 255, 118, 52, 8, 3, 100, 42, 247, 255, 182, 48, 181, 4, 255, 255, 163, 245, 75, 191, 181, 4, 255, 255, 163, 245, 35, 221, 181, 4, 255, 255, 163, 245, 182, 48, 0, 0, 59, 32, 78, 62, 120, 0, 0, 0, 59, 32, 78, 62, 118, 52, 0, 0, 59, 32, 78, 62, 182, 48, 173, 1, 213, 245, 250, 51, 35, 221, 173, 1, 213, 245, 250, 51, 151, 0, 173, 1, 213, 245, 250, 51, 182, 48, 136, 215, 41, 10, 107, 205, 75, 191, 136, 215, 41, 10, 107, 205, 29, 31, 136, 215, 41, 10, 107, 205, 118, 52, 54, 217, 195, 223, 24, 195, 76, 191, 54, 217, 195, 223, 24, 195, 35, 221, 54, 217, 195, 223, 24, 195, 112, 242, 128, 212, 0, 0, 194, 11, 29, 31, 128, 212, 0, 0, 194, 11, 120, 0, 128, 212, 0, 0, 194, 11, 118, 52, 46, 214, 154, 213, 110, 1, 35, 221, 46, 214, 154, 213, 110, 1, 112, 242, 46, 214, 154, 213, 110, 1, 151, 0, 222, 3, 49, 149, 205, 250, 75, 191, 222, 3, 49, 149, 205, 250, 75, 191, 222, 3, 49, 149, 205, 250, 182, 48, 214, 0, 8, 139, 36, 57, 120, 0, 214, 0, 8, 139, 36, 57, 151, 0, 214, 0, 8, 139, 36, 57, 182, 48, 246, 252, 152, 102, 0, 0, 112, 242, 246, 252, 152, 102, 0, 0, 29, 31, 246, 252, 152, 102, 0, 0, 120, 0, 246, 252, 152, 102, 0, 0, 151, 0, 255, 255, 193, 112, 169, 193, 75, 191, 255, 255, 193, 112, 169, 193, 76, 191, 255, 255, 193, 112, 169, 193, 112, 242, 255, 255, 193, 112, 169, 193, 29, 31, 10, 129, 164, 127, 55, 38, 75, 217, 227, 90, 15, 166, 79, 129, 226, 127, 84, 177, 255, 172, 227, 90, 15, 166, 137, 63, 91, 191, 55, 38, 75, 217, 227, 90, 15, 166, 84, 177, 255, 172, 121, 63, 106, 191, 227, 90, 15, 166, 10, 129, 164, 127, 176, 22, 69, 203, 55, 38, 75, 217, 79, 129, 226, 127, 84, 177, 255, 172, 28, 182, 220, 162, 176, 22, 69, 203, 136, 63, 91, 191, 55, 38, 75, 217, 84, 177, 255, 172, 28, 182, 220, 162, 122, 63, 106, 191, 10, 129, 164, 127, 79, 129, 226, 127, 227, 90, 15, 166, 137, 63, 91, 191, 121, 63, 106, 191, 227, 90, 15, 166, 28, 182, 220, 162, 176, 22, 69, 203, 137, 63, 91, 191, 122, 63, 106, 191, 10, 129, 164, 127, 79, 129, 226, 127, 28, 182, 220, 162, 176, 22, 69, 203)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_f4bkv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4p0s4"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_1y28j"]
+material = SubResource("StandardMaterial3D_4p0s4")
+text = "Atzendorfburg"
+font = ExtResource("21_8tu7u")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_c4ie8"]
+_surfaces = [{
+"aabb": AABB(-0.258965, 3.22474, 0.0988499, 1.83657, 0.519899, 0.110258),
+"format": 34896613377,
+"index_count": 60,
+"index_data": PackedByteArray(8, 0, 3, 0, 1, 0, 8, 0, 9, 0, 3, 0, 9, 0, 7, 0, 3, 0, 9, 0, 10, 0, 7, 0, 10, 0, 5, 0, 7, 0, 10, 0, 11, 0, 5, 0, 11, 0, 1, 0, 5, 0, 11, 0, 8, 0, 1, 0, 2, 0, 4, 0, 6, 0, 2, 0, 0, 0, 4, 0, 7, 0, 1, 0, 3, 0, 7, 0, 5, 0, 1, 0, 4, 0, 8, 0, 11, 0, 4, 0, 0, 0, 8, 0, 6, 0, 11, 0, 10, 0, 6, 0, 4, 0, 11, 0, 2, 0, 10, 0, 9, 0, 2, 0, 6, 0, 10, 0, 0, 0, 9, 0, 8, 0, 0, 0, 2, 0, 9, 0),
+"name": "material_sign",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray(222, 0, 77, 38, 174, 237, 0, 0, 69, 2, 255, 255, 35, 232, 0, 0, 0, 0, 105, 28, 138, 5, 0, 0, 102, 1, 26, 246, 0, 0, 0, 0, 87, 215, 228, 9, 145, 252, 0, 0, 189, 216, 149, 227, 7, 247, 0, 0, 120, 214, 0, 0, 109, 20, 0, 0, 223, 215, 177, 217, 227, 14, 0, 0, 145, 1, 38, 147, 233, 234, 0, 0, 179, 0, 65, 137, 197, 2, 0, 0, 32, 255, 96, 105, 219, 23, 0, 0, 255, 255, 69, 115, 255, 255, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_1rabo"]
+resource_name = "Sign_Cube_005"
+_surfaces = [{
+"aabb": AABB(-0.258965, 3.22474, 0.0988499, 1.83657, 0.519899, 0.110258),
+"attribute_data": PackedByteArray(223, 148, 213, 173, 68, 146, 214, 173, 209, 148, 133, 138, 240, 145, 85, 173, 141, 126, 92, 173, 127, 126, 58, 138, 227, 149, 38, 174, 135, 132, 44, 174, 208, 149, 199, 124, 144, 127, 173, 173, 51, 132, 171, 173, 125, 127, 124, 124, 7, 147, 38, 96, 171, 151, 37, 96, 7, 147, 38, 96, 179, 146, 165, 95, 179, 146, 165, 95, 88, 129, 172, 95, 174, 152, 117, 96, 74, 133, 125, 96, 74, 133, 125, 96, 92, 130, 252, 95, 246, 132, 251, 95, 246, 132, 251, 95, 182, 137, 153, 173, 182, 137, 153, 173, 168, 137, 95, 138, 186, 138, 233, 173, 186, 138, 233, 173, 166, 138, 162, 124, 218, 141, 191, 81, 218, 141, 191, 81, 120, 133, 195, 81, 120, 133, 195, 81, 53, 147, 109, 81, 53, 147, 109, 81, 215, 140, 111, 81, 215, 140, 111, 81),
+"format": 34896613399,
+"index_count": 60,
+"index_data": PackedByteArray(26, 0, 11, 0, 5, 0, 26, 0, 29, 0, 11, 0, 27, 0, 21, 0, 9, 0, 27, 0, 30, 0, 21, 0, 33, 0, 16, 0, 23, 0, 33, 0, 35, 0, 16, 0, 36, 0, 4, 0, 17, 0, 36, 0, 24, 0, 4, 0, 7, 0, 14, 0, 20, 0, 7, 0, 1, 0, 14, 0, 22, 0, 3, 0, 10, 0, 22, 0, 15, 0, 3, 0, 13, 0, 25, 0, 37, 0, 13, 0, 0, 0, 25, 0, 19, 0, 34, 0, 32, 0, 19, 0, 12, 0, 34, 0, 6, 0, 31, 0, 28, 0, 6, 0, 18, 0, 31, 0, 2, 0, 29, 0, 26, 0, 2, 0, 8, 0, 29, 0),
+"material": SubResource("StandardMaterial3D_mayah"),
+"name": "material_sign",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 38,
+"vertex_data": PackedByteArray(222, 0, 77, 38, 174, 237, 15, 192, 222, 0, 77, 38, 174, 237, 235, 47, 222, 0, 77, 38, 174, 237, 117, 43, 69, 2, 255, 255, 35, 232, 57, 219, 69, 2, 255, 255, 35, 232, 15, 192, 69, 2, 255, 255, 35, 232, 117, 43, 0, 0, 105, 28, 138, 5, 15, 0, 0, 0, 105, 28, 138, 5, 235, 47, 0, 0, 105, 28, 138, 5, 117, 43, 102, 1, 26, 246, 0, 0, 31, 0, 102, 1, 26, 246, 0, 0, 57, 219, 102, 1, 26, 246, 0, 0, 117, 43, 87, 215, 228, 9, 145, 252, 165, 30, 87, 215, 228, 9, 145, 252, 15, 192, 87, 215, 228, 9, 145, 252, 235, 47, 189, 216, 149, 227, 7, 247, 57, 219, 189, 216, 149, 227, 7, 247, 99, 237, 189, 216, 149, 227, 7, 247, 15, 192, 120, 214, 0, 0, 109, 20, 15, 0, 120, 214, 0, 0, 109, 20, 165, 30, 120, 214, 0, 0, 109, 20, 235, 47, 223, 215, 177, 217, 227, 14, 31, 0, 223, 215, 177, 217, 227, 14, 57, 219, 223, 215, 177, 217, 227, 14, 99, 237, 145, 1, 38, 147, 233, 234, 15, 192, 145, 1, 38, 147, 233, 234, 15, 192, 145, 1, 38, 147, 233, 234, 117, 43, 179, 0, 65, 137, 197, 2, 31, 0, 179, 0, 65, 137, 197, 2, 15, 0, 179, 0, 65, 137, 197, 2, 117, 43, 32, 255, 96, 105, 219, 23, 31, 0, 32, 255, 96, 105, 219, 23, 15, 0, 32, 255, 96, 105, 219, 23, 165, 30, 32, 255, 96, 105, 219, 23, 99, 237, 255, 255, 69, 115, 255, 255, 165, 30, 255, 255, 69, 115, 255, 255, 99, 237, 255, 255, 69, 115, 255, 255, 15, 192, 255, 255, 69, 115, 255, 255, 15, 192, 221, 127, 111, 128, 231, 40, 23, 217, 208, 86, 42, 170, 181, 173, 129, 172, 69, 128, 208, 128, 208, 86, 42, 170, 214, 191, 15, 64, 231, 40, 23, 217, 208, 86, 42, 170, 215, 63, 64, 192, 181, 173, 129, 172, 208, 86, 42, 170, 229, 22, 148, 205, 221, 127, 111, 128, 231, 40, 23, 217, 181, 173, 129, 172, 228, 179, 250, 157, 69, 128, 208, 128, 214, 191, 15, 64, 229, 22, 148, 205, 231, 40, 23, 217, 215, 63, 64, 192, 181, 173, 129, 172, 228, 179, 250, 157, 69, 128, 208, 128, 221, 127, 111, 128, 208, 86, 42, 170, 215, 63, 64, 192, 214, 191, 15, 64, 208, 86, 42, 170, 215, 63, 64, 192, 214, 191, 15, 64, 229, 22, 148, 205, 228, 179, 250, 157, 229, 22, 148, 205, 228, 179, 250, 157, 69, 128, 208, 128, 221, 127, 111, 128)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_c4ie8")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c76we"]
+size = Vector3(0.2, 5, 0.2)
+
 [node name="PrototypeScene" type="Node3D"]
 
 [node name="PlayerCharacter" parent="." instance=ExtResource("1_ubtnu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 247.701, -6.64396, 128.259)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 381.128, -4.68318, 284.016)
+visible = false
+metadata/_edit_group_ = true
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.82853, -0.310235, -0.466147, 0.559945, 0.459043, 0.68974, 0, -0.832486, 0.554046, 229.169, 101, 233.315)
+transform = Transform3D(0.82853, -0.310235, -0.466146, 0.559945, 0.459043, 0.68974, 0, -0.832486, 0.554045, 229.169, 172.023, 233.315)
 
 [node name="HTerrain" type="Node3D" parent="."]
 script = ExtResource("2_vr7vr")
@@ -281,6 +429,207 @@ transform = Transform3D(-0.995598, 0, 0.183409, 0, 1.01235, 0, -0.183409, 0, -0.
 [node name="pine_tree9" parent="Trees/forrest_segment5" instance=ExtResource("13_y3w2y")]
 transform = Transform3D(-0.736305, 0, 0.909261, 0, 1.17, 0, -0.909261, 0, -0.736305, -2.09419, 0.771381, 19.9022)
 
+[node name="forrest_segment6" type="Node3D" parent="Trees"]
+transform = Transform3D(0.595244, 0, 0.803545, 0, 1, 0, -0.803545, 0, 0.595244, 402.607, -4.19727, 227.297)
+
+[node name="pine_tree23" parent="Trees/forrest_segment6" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(-0.153413, 0, -0.97923, 0, 0.991175, 0, 0.97923, 0, -0.153413, -0.00279236, -3.77578, -18.0327)
+
+[node name="pine_tree24" parent="Trees/forrest_segment6" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(0.982643, 0, -0.697451, 0, 1.205, 0, 0.697451, 0, 0.982643, -8.61992, -3.49, -9.43945)
+
+[node name="pine_tree25" parent="Trees/forrest_segment6" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(-0.818011, 0, -0.324435, 0, 0.88, 0, 0.324435, 0, -0.818011, -13.6269, -3.71449, -11.7389)
+
+[node name="pine_tree7" parent="Trees/forrest_segment6" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(-0.513054, 0, 1.37222, 0, 1.465, 0, -1.37222, 0, -0.513054, -1.55981, -3.06775, 8.46841)
+
+[node name="pine_tree8" parent="Trees/forrest_segment6" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(-0.107347, 0, -1.11484, 0, 1.12, 0, 1.11484, 0, -0.107347, -4.09702, -4.17027, 16.1645)
+
+[node name="pine_tree18" parent="Trees/forrest_segment6" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(-0.752364, 0, 0.258149, 0, 0.79542, 0, -0.258149, 0, -0.752364, -4.34976, -4.2946, 4.35127)
+
+[node name="pine_tree19" parent="Trees/forrest_segment6" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(1.27565, 0, 0.355257, 0, 1.32419, 0, -0.355257, 0, 1.27565, -8.22977, -3.06108, 4.34857)
+
+[node name="pine_tree20" parent="Trees/forrest_segment6" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(-0.995598, 0, 0.183409, 0, 1.01235, 0, -0.183409, 0, -0.995598, -12.8838, -3.83533, -0.355743)
+
+[node name="pine_tree9" parent="Trees/forrest_segment6" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(-0.736305, 0, 0.909261, 0, 1.17, 0, -0.909261, 0, -0.736305, -2.09419, -2.933, 19.9022)
+
+[node name="forrest_segment7" type="Node3D" parent="Trees"]
+transform = Transform3D(0.445308, 0, 0.895378, 0, 1, 0, -0.895378, 0, 0.445308, 405.661, -4.19727, 255.659)
+
+[node name="pine_tree23" parent="Trees/forrest_segment7" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(-0.153413, 0, -0.97923, 0, 0.991175, 0, 0.97923, 0, -0.153413, -22.4361, -4.72759, -5.94266)
+
+[node name="pine_tree24" parent="Trees/forrest_segment7" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(0.982643, 0, -0.697451, 0, 1.205, 0, 0.697451, 0, 0.982643, -8.61993, -5.0826, -9.43945)
+
+[node name="pine_tree25" parent="Trees/forrest_segment7" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(-0.818011, 0, -0.324435, 0, 0.88, 0, 0.324435, 0, -0.818011, -13.6269, -4.36053, -11.7389)
+
+[node name="pine_tree7" parent="Trees/forrest_segment7" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(-0.513054, 0, 1.37222, 0, 1.465, 0, -1.37222, 0, -0.513054, -1.55983, -4.90885, 8.46841)
+
+[node name="pine_tree8" parent="Trees/forrest_segment7" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(-0.107347, 0, -1.11484, 0, 1.12, 0, 1.11484, 0, -0.107347, -4.09698, -3.12317, 16.1646)
+
+[node name="pine_tree18" parent="Trees/forrest_segment7" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(-0.752364, 0, 0.258149, 0, 0.79542, 0, -0.258149, 0, -0.752364, -4.34976, -5.4353, 4.35126)
+
+[node name="pine_tree19" parent="Trees/forrest_segment7" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(1.27565, 0, 0.355257, 0, 1.32419, 0, -0.355257, 0, 1.27565, -8.22974, -4.88065, 4.34863)
+
+[node name="pine_tree20" parent="Trees/forrest_segment7" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(-0.995598, 0, 0.183409, 0, 1.01235, 0, -0.183409, 0, -0.995598, -12.8838, -5.04408, -0.355743)
+
+[node name="pine_tree9" parent="Trees/forrest_segment7" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(-0.736305, 0, 0.909261, 0, 1.17, 0, -0.909261, 0, -0.736305, -2.09421, -3.38352, 19.9023)
+
+[node name="pine_tree26" parent="Trees/forrest_segment7" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(0.826096, 0, -0.547714, 0, 0.991175, 0, 0.547714, 0, 0.826096, -46.5743, -2.18748, 17.7165)
+
+[node name="pine_tree27" parent="Trees/forrest_segment7" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(1.04363, 0, 0.602372, 0, 1.205, 0, -0.602372, 0, 1.04363, -43.9922, -4.5679, 3.70059)
+
+[node name="pine_tree28" parent="Trees/forrest_segment7" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(-0.0461629, 0, -0.878788, 0, 0.88, 0, 0.878788, 0, -0.0461629, -48.1699, -4.73982, 7.29288)
+
+[node name="pine_tree10" parent="Trees/forrest_segment7" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(-1.46117, 0, 0.105787, 0, 1.465, 0, -0.105787, 0, -1.46117, -24.7715, -1.50419, 4.74973)
+
+[node name="pine_tree11" parent="Trees/forrest_segment7" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(0.968564, 0, -0.562383, 0, 1.12, 0, 0.562383, 0, 0.968564, -18.8339, -1.90984, 10.2646)
+
+[node name="pine_tree21" parent="Trees/forrest_segment7" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(-0.548325, 0, -0.576222, 0, 0.79542, 0, 0.576222, 0, -0.548325, -29.677, -3.02345, 5.56906)
+
+[node name="pine_tree22" parent="Trees/forrest_segment7" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(0.208952, 0, 1.3076, 0, 1.32419, 0, -1.3076, 0, 0.208952, -31.297, -1.94516, 9.09457)
+
+[node name="pine_tree29" parent="Trees/forrest_segment7" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(-0.581803, 0, -0.828468, 0, 1.01235, 0, 0.828468, 0, -0.581803, -37.5134, -2.61629, 11.3635)
+
+[node name="pine_tree12" parent="Trees/forrest_segment7" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(-1.13345, 0, -0.290156, 0, 1.17, 0, 0.290156, 0, -1.13345, -14.6016, -3.38352, 10.0025)
+
+[node name="forrest_segment8" type="Node3D" parent="Trees"]
+transform = Transform3D(0.391582, 0, -0.920144, 0, 1, 0, 0.920144, 0, 0.391582, 353.825, -4.19727, 294.903)
+
+[node name="pine_tree23" parent="Trees/forrest_segment8" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(-0.153413, 0, -0.97923, 0, 0.991175, 0, 0.97923, 0, -0.153413, -20.9081, 4.64016, -5.29237)
+
+[node name="pine_tree24" parent="Trees/forrest_segment8" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(0.982643, 0, -0.697451, 0, 1.205, 0, 0.697451, 0, 0.982643, -8.61984, 2.43667, -9.43938)
+
+[node name="pine_tree25" parent="Trees/forrest_segment8" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(-0.818011, 0, -0.324435, 0, 0.88, 0, 0.324435, 0, -0.818011, -13.6269, 0.0233488, -11.7389)
+
+[node name="pine_tree7" parent="Trees/forrest_segment8" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(-0.513054, 0, 1.37222, 0, 1.465, 0, -1.37222, 0, -0.513054, -0.398193, -0.120349, 11.4939)
+
+[node name="pine_tree8" parent="Trees/forrest_segment8" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(-0.107347, 0, -1.11484, 0, 1.12, 0, 1.11484, 0, -0.107347, -4.09698, -3.42824, 16.1646)
+
+[node name="pine_tree18" parent="Trees/forrest_segment8" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(-0.752364, 0, 0.258149, 0, 0.79542, 0, -0.258149, 0, -0.752364, -4.34976, -5.4353, 4.35126)
+
+[node name="pine_tree19" parent="Trees/forrest_segment8" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(1.27565, 0, 0.355257, 0, 1.32419, 0, -0.355257, 0, 1.27565, -4.51111, 9.63108, 0.942261)
+
+[node name="pine_tree20" parent="Trees/forrest_segment8" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(-0.995598, 0, 0.183409, 0, 1.01235, 0, -0.183409, 0, -0.995598, -12.8838, 4.90788, -0.355713)
+
+[node name="pine_tree9" parent="Trees/forrest_segment8" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(-0.736305, 0, 0.909261, 0, 1.17, 0, -0.909261, 0, -0.736305, -2.09424, -4.29194, 19.9023)
+
+[node name="pine_tree26" parent="Trees/forrest_segment8" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(0.826096, 0, -0.547714, 0, 0.991175, 0, 0.547714, 0, 0.826096, -46.5743, -4.58198, 17.7166)
+
+[node name="pine_tree27" parent="Trees/forrest_segment8" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(1.04363, 0, 0.602372, 0, 1.205, 0, -0.602372, 0, 1.04363, -43.9922, -2.0339, 3.70059)
+
+[node name="pine_tree28" parent="Trees/forrest_segment8" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(-0.0461629, 0, -0.878788, 0, 0.88, 0, 0.878788, 0, -0.0461629, -50.2121, -3.44038, 6.42384)
+
+[node name="pine_tree10" parent="Trees/forrest_segment8" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(-1.46117, 0, 0.105787, 0, 1.465, 0, -0.105787, 0, -1.46117, -24.7715, 0.626555, 4.74974)
+
+[node name="pine_tree11" parent="Trees/forrest_segment8" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(0.968564, 0, -0.562383, 0, 1.12, 0, 0.562383, 0, 0.968564, -19.1257, -1.63059, 13.0581)
+
+[node name="pine_tree21" parent="Trees/forrest_segment8" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(-0.548325, 0, -0.576222, 0, 0.79542, 0, 0.576222, 0, -0.548325, -29.6771, -0.819564, 5.56921)
+
+[node name="pine_tree22" parent="Trees/forrest_segment8" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(0.208952, 0, 1.3076, 0, 1.32419, 0, -1.3076, 0, 0.208952, -31.297, -3.74475, 9.09457)
+
+[node name="pine_tree29" parent="Trees/forrest_segment8" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(-0.581803, 0, -0.828468, 0, 1.01235, 0, 0.828468, 0, -0.581803, -37.3519, -5.38543, 11.4388)
+
+[node name="pine_tree12" parent="Trees/forrest_segment8" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(-1.13345, 0, -0.290156, 0, 1.17, 0, 0.290156, 0, -1.13345, -14.2808, 0.314197, 9.24863)
+
+[node name="forrest_segment9" type="Node3D" parent="Trees"]
+transform = Transform3D(0.391582, 0, -0.920144, 0, 1, 0, 0.920144, 0, 0.391582, 320.394, -4.19727, 244.721)
+
+[node name="pine_tree23" parent="Trees/forrest_segment9" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(-0.153413, 0, -0.97923, 0, 0.991175, 0, 0.97923, 0, -0.153413, -22.4361, 4.5096, -5.94264)
+
+[node name="pine_tree24" parent="Trees/forrest_segment9" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(0.982643, 0, -0.697451, 0, 1.205, 0, 0.697451, 0, 0.982643, -10.8672, 2.25152, -9.26599)
+
+[node name="pine_tree25" parent="Trees/forrest_segment9" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(-0.818011, 0, -0.324435, 0, 0.88, 0, 0.324435, 0, -0.818011, -13.6269, 0.0233488, -11.7389)
+
+[node name="pine_tree7" parent="Trees/forrest_segment9" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(-0.513054, 0, 1.37222, 0, 1.465, 0, -1.37222, 0, -0.513054, -1.55984, -5.79255, 8.46841)
+
+[node name="pine_tree8" parent="Trees/forrest_segment9" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(-0.107347, 0, -1.11484, 0, 1.12, 0, 1.11484, 0, -0.107347, -4.09698, -6.61949, 16.1646)
+
+[node name="pine_tree18" parent="Trees/forrest_segment9" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(-0.752364, 0, 0.258149, 0, 0.79542, 0, -0.258149, 0, -0.752364, -4.34976, -6.0929, 4.35124)
+
+[node name="pine_tree19" parent="Trees/forrest_segment9" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(1.27565, 0, 0.355257, 0, 1.32419, 0, -0.355257, 0, 1.27565, -8.22974, -5.28187, 4.34866)
+
+[node name="pine_tree20" parent="Trees/forrest_segment9" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(-0.995598, 0, 0.183409, 0, 1.01235, 0, -0.183409, 0, -0.995598, -12.8838, -1.67419, -0.355713)
+
+[node name="pine_tree9" parent="Trees/forrest_segment9" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(-0.736305, 0, 0.909261, 0, 1.17, 0, -0.909261, 0, -0.736305, -2.09421, -4.46931, 19.9023)
+
+[node name="pine_tree26" parent="Trees/forrest_segment9" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(0.826096, 0, -0.547714, 0, 0.991175, 0, 0.547714, 0, 0.826096, -48.4328, 9.62295, 18.2668)
+
+[node name="pine_tree27" parent="Trees/forrest_segment9" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(1.04363, 0, 0.602372, 0, 1.205, 0, -0.602372, 0, 1.04363, -45.7998, 7.93442, 7.9483)
+
+[node name="pine_tree28" parent="Trees/forrest_segment9" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(-0.0461629, 0, -0.878788, 0, 0.88, 0, 0.878788, 0, -0.0461629, -48.1699, -4.73982, 7.29288)
+
+[node name="pine_tree10" parent="Trees/forrest_segment9" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(-1.46117, 0, 0.105787, 0, 1.465, 0, -0.105787, 0, -1.46117, -24.7715, 0.626555, 4.74974)
+
+[node name="pine_tree11" parent="Trees/forrest_segment9" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(0.968564, 0, -0.562383, 0, 1.12, 0, 0.562383, 0, 0.968564, -18.7351, -0.022779, 10.4158)
+
+[node name="pine_tree21" parent="Trees/forrest_segment9" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(-0.548325, 0, -0.576222, 0, 0.79542, 0, 0.576222, 0, -0.548325, -29.677, -3.02345, 5.56906)
+
+[node name="pine_tree22" parent="Trees/forrest_segment9" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(0.208952, 0, 1.3076, 0, 1.32419, 0, -1.3076, 0, 0.208952, -31.2494, 6.92678, 12.7679)
+
+[node name="pine_tree29" parent="Trees/forrest_segment9" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(-0.581803, 0, -0.828468, 0, 1.01235, 0, 0.828468, 0, -0.581803, -37.5134, 2.16856, 11.3634)
+
+[node name="pine_tree12" parent="Trees/forrest_segment9" instance=ExtResource("13_y3w2y")]
+transform = Transform3D(-1.13345, 0, -0.290156, 0, 1.17, 0, 0.290156, 0, -1.13345, -14.6016, -0.790094, 10.0025)
+
 [node name="pine_tree10" parent="." instance=ExtResource("13_y3w2y")]
 transform = Transform3D(0.520241, 0, -0.991838, 0, 1.12, 0, 0.991838, 0, 0.520241, 272.372, 10.9481, 214.354)
 
@@ -330,19 +679,19 @@ transform = Transform3D(0.76892, 0, 0.639345, 0, 1, 0, -0.639345, 0, 0.76892, 14
 metadata/_edit_group_ = true
 
 [node name="tower3" parent="Castle" instance=ExtResource("16_8bsq2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.71916, 8.19971, 18.7374)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.71916, 10.5108, 18.7374)
 
 [node name="wall_segment2" parent="Castle" instance=ExtResource("17_7qqfl")]
 transform = Transform3D(0.0868079, 0, 0.996225, 0, 1, 0, -0.996225, 0, 0.0868079, 5.9274, 19.3928, 28.5545)
 
 [node name="tower4" parent="Castle" instance=ExtResource("16_8bsq2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.04713, 14.507, 38.5987)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.04713, 16.5816, 38.5987)
 
 [node name="wall_segment3" parent="Castle" instance=ExtResource("17_7qqfl")]
 transform = Transform3D(0.963752, 0, 0.266801, 0, 1, 0, -0.266801, 0, 0.963752, -4.4612, 25.6811, 41.4673)
 
 [node name="tower5" parent="Castle" instance=ExtResource("16_8bsq2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.1744, 19.4701, 44.1188)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.1744, 17.1337, 44.1188)
 
 [node name="tower6" parent="Castle/tower5" instance=ExtResource("16_8bsq2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 19.0943, 0)
@@ -351,16 +700,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 19.0943, 0)
 transform = Transform3D(0.999896, 0, -0.0144508, 0, 1, 0, 0.0144508, 0, 0.999896, -23.9877, 39.8746, 43.972)
 
 [node name="tower6" parent="Castle" instance=ExtResource("16_8bsq2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.0059, 37.2316, 43.8089)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.0059, 31.1834, 43.8089)
 
 [node name="wall_segment5" parent="Castle" instance=ExtResource("17_7qqfl")]
-transform = Transform3D(0.436488, 0, 0.89971, 0, 1, 0, -0.89971, 0, 0.436488, -38.448, 39.2207, 52.848)
+transform = Transform3D(0.436488, 0, 0.89971, 0, 1, 0, -0.89971, 0, 0.436488, -38.448, 38.5145, 52.848)
 
 [node name="wall_segment6" parent="Castle" instance=ExtResource("17_7qqfl")]
-transform = Transform3D(0.436488, 0, 0.89971, 0, 1, 0, -0.89971, 0, 0.436488, -45.4318, 39.2207, 67.2433)
+transform = Transform3D(0.436488, 0, 0.89971, 0, 1, 0, -0.89971, 0, 0.436488, -45.4318, 38.5145, 67.2433)
 
 [node name="tower7" parent="Castle" instance=ExtResource("16_8bsq2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49.8613, 30.4558, 76.3233)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49.8613, 29.8434, 76.3233)
 
 [node name="wall_segment7" parent="Castle" instance=ExtResource("17_7qqfl")]
 transform = Transform3D(0.976871, 0, -0.213832, 0, 1, 0, 0.213832, 0, 0.976871, -59.3284, 28.0334, 74.3183)
@@ -478,3 +827,34 @@ transform = Transform3D(-0.651516, 0, 0.758635, 0, 1, 0, -0.758635, 0, -0.651516
 
 [node name="wall_segment24" parent="Castle" instance=ExtResource("17_7qqfl")]
 transform = Transform3D(-0.651516, 0, 0.758635, 0, 1, 0, -0.758635, 0, -0.651516, 18.0955, 10.7501, -18.9804)
+
+[node name="Sign2" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, 336.549, -7.30192, 344.847)
+
+[node name="Cube" type="MeshInstance3D" parent="Sign2"]
+mesh = SubResource("ArrayMesh_u3ofo")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("20_i0w7p")
+
+[node name="Cube_002" type="MeshInstance3D" parent="Sign2/Cube"]
+material_override = ExtResource("20_i0w7p")
+mesh = SubResource("ArrayMesh_p34xt")
+skeleton = NodePath("")
+
+[node name="Cube_003" type="MeshInstance3D" parent="Sign2/Cube"]
+material_override = ExtResource("20_i0w7p")
+mesh = SubResource("ArrayMesh_03vv4")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sign2/Cube/Cube_003"]
+transform = Transform3D(-0.960574, 0.0268813, 0.00994822, 0.0269668, 0.957623, 3.34943e-10, 0.00955647, -0.000267434, 0.999951, 0.6551, 4.78491, 0.141351)
+mesh = SubResource("TextMesh_1y28j")
+
+[node name="Cube_004" type="MeshInstance3D" parent="Sign2/Cube"]
+material_override = ExtResource("20_i0w7p")
+mesh = SubResource("ArrayMesh_1rabo")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sign2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
+shape = SubResource("BoxShape3D_c76we")
