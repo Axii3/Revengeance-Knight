@@ -32,7 +32,7 @@ func _physics_process(delta):
 	# Speed Multiplier Value for later
 	var speed = SPEED
 	_apply_movement(speed, delta)
-	
+	_raycast_check()
 	
 	
 
@@ -54,3 +54,9 @@ func _apply_movement(speed : float, delta : float):
 		velocity.z = lerp(velocity.z, direction.z * speed, delta * 2.0)
 	
 	move_and_slide()
+
+func _raycast_check():
+	var ray = $Head/Camera3D/RayCast3D
+	if (ray.get_collider() != null):
+		$MeshInstance3D.global_position = ray.get_collision_point()
+		pass

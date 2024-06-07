@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://0dy527qun08k"]
+[gd_scene load_steps=42 format=3 uid="uid://0dy527qun08k"]
 
 [ext_resource type="PackedScene" uid="uid://dv4lm0kcvab24" path="res://assets/player_character/player_character.tscn" id="1_ubtnu"]
 [ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain.gd" id="2_vr7vr"]
@@ -21,21 +21,36 @@
 [ext_resource type="PackedScene" uid="uid://lvcrl0bxu5vk" path="res://assets/scenes/castle_kit/door.tscn" id="19_87el7"]
 [ext_resource type="Material" uid="uid://cmse15c3jyh8c" path="res://assets/materials/material_wood.tres" id="20_i0w7p"]
 [ext_resource type="FontFile" uid="uid://d4hiusep38mxq" path="res://assets/fonts/BlackFlag.ttf" id="21_8tu7u"]
+[ext_resource type="Script" path="res://assets/scripts/interactive.gd" id="22_krt3k"]
 
 [sub_resource type="Resource" id="Resource_gy30a"]
 script = ExtResource("4_oagnb")
 mode = 0
 textures = [[ExtResource("5_bcbhd"), ExtResource("6_qnak0"), ExtResource("7_3kohf")], [ExtResource("7_6r52n"), ExtResource("8_i71sc"), ExtResource("10_5jrcg")]]
 
-[sub_resource type="Environment" id="Environment_yw0ov"]
-background_mode = 1
-background_color = Color(0.730257, 0.693507, 0.654858, 1)
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0dbgi"]
+sky_top_color = Color(0.366093, 0.655184, 0.789797, 1)
+sky_horizon_color = Color(1, 1, 1, 1)
+ground_bottom_color = Color(1, 1, 1, 1)
+ground_horizon_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Sky" id="Sky_ppp8c"]
+sky_material = SubResource("ProceduralSkyMaterial_0dbgi")
+
+[sub_resource type="Environment" id="Environment_phlas"]
+background_mode = 2
+background_color = Color(0.5589, 0.61749, 0.81, 1)
+sky = SubResource("Sky_ppp8c")
+ambient_light_source = 2
+ambient_light_color = Color(0.74, 0.718293, 0.6586, 1)
+ambient_light_energy = 0.5
 fog_enabled = true
-fog_light_color = Color(0.817521, 0.817521, 0.817521, 1)
-adjustment_enabled = true
+fog_light_color = Color(0.85, 0.810475, 0.7735, 1)
+fog_light_energy = 0.84
+fog_density = 0.005
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_p1687"]
-size = Vector3(10, 20, 68.1592)
+size = Vector3(18.1729, 27.0132, 68.1592)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mayah"]
 resource_name = "material_sign"
@@ -181,15 +196,21 @@ shadow_mesh = SubResource("ArrayMesh_c4ie8")
 [sub_resource type="BoxShape3D" id="BoxShape3D_c76we"]
 size = Vector3(0.2, 5, 0.2)
 
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_2gd0k"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rnba2"]
+
 [node name="PrototypeScene" type="Node3D"]
 
 [node name="PlayerCharacter" parent="." instance=ExtResource("1_ubtnu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 381.128, -4.68318, 284.016)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 249.185, -4.34028, 129.385)
 visible = false
 metadata/_edit_group_ = true
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.82853, -0.310235, -0.466146, 0.559945, 0.459043, 0.68974, 0, -0.832486, 0.554045, 229.169, 172.023, 233.315)
+light_color = Color(1, 0.8915, 0.69, 1)
+light_energy = 2.0
 
 [node name="HTerrain" type="Node3D" parent="."]
 script = ExtResource("2_vr7vr")
@@ -212,7 +233,7 @@ shader_params/u_tile_reduction = null
 [node name="HTerrainDetailLayer" type="Node3D" parent="HTerrain"]
 script = ExtResource("9_phn52")
 texture = ExtResource("10_exev5")
-density = 5.0
+density = 10.0
 shader_params/u_globalmap_tint_bottom = null
 shader_params/u_globalmap_tint_top = null
 shader_params/u_bottom_ao = null
@@ -221,7 +242,7 @@ shader_params/u_roughness = null
 metadata/_editor_icon = ExtResource("11_618uj")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_yw0ov")
+environment = SubResource("Environment_phlas")
 
 [node name="Sign" parent="." instance=ExtResource("12_oqvr1")]
 transform = Transform3D(0.994018, 0.0779684, -0.0764844, -0.0813521, 0.995793, -0.0421651, 0.0728751, 0.048135, 0.996179, 248.055, -8.44414, 123.002)
@@ -645,7 +666,7 @@ transform = Transform3D(-0.480735, 0, 0.389445, 0, 0.618689, 0, -0.389445, 0, -0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 205.477, 7.72794, 127.901)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="invisible_walls/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.876724, 0, -9.07959)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2097, 3.50659, -3.53394)
 shape = SubResource("BoxShape3D_p1687")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="invisible_walls/StaticBody3D"]
@@ -832,6 +853,7 @@ transform = Transform3D(-0.651516, 0, 0.758635, 0, 1, 0, -0.758635, 0, -0.651516
 transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, 336.549, -7.30192, 344.847)
 
 [node name="Cube" type="MeshInstance3D" parent="Sign2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.82422, 0)
 mesh = SubResource("ArrayMesh_u3ofo")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("20_i0w7p")
@@ -858,3 +880,13 @@ skeleton = NodePath("")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sign2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
 shape = SubResource("BoxShape3D_c76we")
+
+[node name="NPC" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 262.998, -5.83717, 128.471)
+script = ExtResource("22_krt3k")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="NPC"]
+mesh = SubResource("CapsuleMesh_2gd0k")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NPC"]
+shape = SubResource("CapsuleShape3D_rnba2")

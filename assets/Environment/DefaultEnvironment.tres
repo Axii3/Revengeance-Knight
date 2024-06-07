@@ -1,0 +1,8 @@
+[gd_resource type="Environment" format=3 uid="uid://dngof2dh51avl"]
+
+[resource]
+background_mode = 1
+background_color = Color(0.730257, 0.693507, 0.654858, 1)
+fog_enabled = true
+fog_light_color = Color(0.817521, 0.817521, 0.817521, 1)
+adjustment_enabled = true
