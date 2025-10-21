@@ -8,17 +8,27 @@ const SENSITIVITY = 0.002
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
+var inventory_open: bool = false
+var disable_control: bool = false
+
 @onready var head = $Head
 @onready var camera = $Head/Camera3D
+@onready var inventory_ui = $"../InventoryUI"
+
+var inventory : Inventory = Inventory.new()
+
+@export var prot_item : Item
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	inventory.add_item(prot_item)
 
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
-		head.rotate_y(-event.relative.x * SENSITIVITY)
-		camera.rotate_x(-event.relative.y * SENSITIVITY)
-		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-80), deg_to_rad(80))
+		if !disable_control:
+			head.rotate_y(-event.relative.x * SENSITIVITY)
+			camera.rotate_x(-event.relative.y * SENSITIVITY)
+			camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-80), deg_to_rad(80))
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -26,21 +36,40 @@ func _physics_process(delta):
 		velocity.y -= gravity * delta
 
 	# Handle jump.
-	if Input.is_action_just_pressed("Jump") and is_on_floor():
+	if Input.is_action_just_pressed("Jump") and is_on_floor() and !disable_control:
 		velocity.y = JUMP_VELOCITY
-
+		inventory.add_item(prot_item)
+	
+	if Input.is_action_just_pressed("Open_inventory"):
+		if inventory_open:
+			inventory_ui.close_inventory()
+			inventory_open = false
+			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+			disable_control = false
+		else:
+			inventory_ui.inventory = inventory
+			inventory_ui.create_inventory()
+			inventory_open = true
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+			disable_control = true
+		
+	
 	# Speed Multiplier Value for later
 	var speed = SPEED
+	
+	
 	_apply_movement(speed, delta)
 	_raycast_check()
-	
+	move_and_slide()
 	
 
 
 	
 # Applying movement to the Character
 func _apply_movement(speed : float, delta : float):
-	var input_dir = Input.get_vector("Left", "Right", "Forward", "Backward")   # Handle Movement Input
+	var input_dir = Vector3.ZERO
+	if !disable_control:
+		input_dir = Input.get_vector("Left", "Right", "Forward", "Backward")   # Handle Movement Input
 	var direction = (head.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()   # Make Movement relative to Camera
 	if is_on_floor():
 		if direction:
@@ -53,7 +82,7 @@ func _apply_movement(speed : float, delta : float):
 		velocity.x = lerp(velocity.x, direction.x * speed, delta * 2.0)
 		velocity.z = lerp(velocity.z, direction.z * speed, delta * 2.0)
 	
-	move_and_slide()
+	
 
 func _raycast_check():
 	var ray = $Head/Camera3D/RayCast3D

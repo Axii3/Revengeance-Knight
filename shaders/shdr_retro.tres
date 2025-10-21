@@ -1,0 +1,12 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://dxjo16tb6wsbr"]
+
+[ext_resource type="Shader" path="res://shaders/shdr_retro.gdshader" id="1_nehns"]
+
+[resource]
+shader = ExtResource("1_nehns")
+shader_parameter/contrast = 1.0
+shader_parameter/brightness = 0.0
+shader_parameter/uTime1 = 1.0
+shader_parameter/uTime2 = 2.0
+shader_parameter/uTime3 = 4.0
+shader_parameter/colors = 8.0

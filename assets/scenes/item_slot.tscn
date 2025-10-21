@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://blpoilpf4lhbm"]
+
+[ext_resource type="Script" uid="uid://b5q3sek0yrqmb" path="res://assets/scripts/item_slot.gd" id="1_a03tp"]
+[ext_resource type="Texture2D" uid="uid://c80yhm4m1l0q7" path="res://assets/textures/items/prototype_iron_axe.png" id="1_s0ur8"]
+
+[node name="ItemSlot" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 80.0
+offset_bottom = 80.0
+mouse_filter = 2
+script = ExtResource("1_a03tp")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 80.0
+mouse_filter = 2
+texture = ExtResource("1_s0ur8")
+expand_mode = 2

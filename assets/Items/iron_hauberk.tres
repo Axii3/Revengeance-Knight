@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://da3h2xjoewj7e"]
+
+[ext_resource type="Script" uid="uid://plb2jwotf1wp" path="res://assets/Items/item.gd" id="1_ps2vv"]
+
+[resource]
+script = ExtResource("1_ps2vv")
+name = "Iron Hauberk"
+metadata/_custom_type_script = "uid://plb2jwotf1wp"
