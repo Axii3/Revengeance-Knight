@@ -1,0 +1,12 @@
+[gd_resource type="Environment" load_steps=2 format=3 uid="uid://ewet5ruo32e"]
+
+[ext_resource type="Sky" uid="uid://cnhtxnilkyhv0" path="res://assets/Environment/daytime_sky.tres" id="1_34fy7"]
+
+[resource]
+background_mode = 2
+sky = ExtResource("1_34fy7")
+ssao_enabled = true
+ssao_intensity = 5.0
+fog_enabled = true
+fog_density = 0.005
+fog_aerial_perspective = 1.0

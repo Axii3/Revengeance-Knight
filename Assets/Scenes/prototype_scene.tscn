@@ -1,21 +1,23 @@
-[gd_scene load_steps=48 format=4 uid="uid://0dy527qun08k"]
+[gd_scene load_steps=46 format=4 uid="uid://0dy527qun08k"]
 
 [ext_resource type="PackedScene" uid="uid://dv4lm0kcvab24" path="res://assets/player_character/player_character.tscn" id="1_ubtnu"]
 [ext_resource type="Resource" uid="uid://bjt0kw1xc02hb" path="res://assets/Items/iron_axe.tres" id="2_1d5nw"]
 [ext_resource type="Script" uid="uid://cnkq40vbx82o2" path="res://addons/zylann.hterrain/hterrain.gd" id="2_vr7vr"]
 [ext_resource type="Resource" uid="uid://up7tae3tnipd" path="res://hterrain/data.hterrain" id="3_2poe4"]
+[ext_resource type="Resource" uid="uid://cf41uq0gjs6ld" path="res://assets/Items/bubatz.tres" id="3_adhv8"]
 [ext_resource type="Script" uid="uid://tpfc6vifdgok" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="4_oagnb"]
-[ext_resource type="Texture2D" uid="uid://cr7hp6d4vsw" path="res://assets/scenes/prototype_scene_slot0_albedo_bump.png" id="5_bcbhd"]
 [ext_resource type="Texture2D" uid="uid://5pys2i0hfj7m" path="res://assets/scenes/prototype_scene_slot1_albedo_bump.png" id="6_qnak0"]
-[ext_resource type="Texture2D" uid="uid://c8pyga4d4la47" path="res://assets/scenes/prototype_scene_slot2_albedo_bump.png" id="7_3kohf"]
-[ext_resource type="Texture2D" uid="uid://b18nx3r26xd2u" path="res://assets/scenes/prototype_scene_slot0_normal_roughness.png" id="7_6r52n"]
+[ext_resource type="Texture2D" uid="uid://c4wm5ycds18a1" path="res://assets/textures/forest_ground_mixed.png" id="7_75vcf"]
 [ext_resource type="Texture2D" uid="uid://ppnue311m2pi" path="res://assets/scenes/prototype_scene_slot1_normal_roughness.png" id="8_i71sc"]
+[ext_resource type="Texture2D" uid="uid://bh1bmbvyc64td" path="res://assets/textures/Dirt_03-512x512.png" id="9_4h4lu"]
 [ext_resource type="Script" uid="uid://ckcyepfk0sgrl" path="res://addons/zylann.hterrain/hterrain_detail_layer.gd" id="9_phn52"]
-[ext_resource type="Texture2D" uid="uid://dxxbbw84qc70k" path="res://assets/scenes/prototype_scene_slot2_normal_roughness.png" id="10_5jrcg"]
+[ext_resource type="Texture2D" uid="uid://dchoajo6qne2e" path="res://assets/textures/forest_ground_mixed_n.png" id="10_4h4lu"]
 [ext_resource type="Texture2D" uid="uid://cgi4xx38sjydl" path="res://assets/textures/Foliage/grass_foliage.png" id="10_exev5"]
 [ext_resource type="Texture2D" uid="uid://6jmdwj3vn6m0" path="res://addons/zylann.hterrain/tools/icons/icon_detail_layer_node.svg" id="11_618uj"]
+[ext_resource type="Texture2D" uid="uid://bdwfksclvh233" path="res://assets/textures/prototype_scene_slot0_normal_roughness.png" id="12_75vcf"]
 [ext_resource type="PackedScene" uid="uid://b4niib4s523mm" path="res://assets/props/sign.tscn" id="12_oqvr1"]
 [ext_resource type="PackedScene" uid="uid://dxdiny6ctow3c" path="res://assets/props/Nature/trees/pine_tree.tscn" id="13_y3w2y"]
+[ext_resource type="Environment" uid="uid://ewet5ruo32e" path="res://assets/Environment/daytime.tres" id="16_4h4lu"]
 [ext_resource type="PackedScene" uid="uid://5vmi1wgoefim" path="res://assets/scenes/castle_kit/tower_segment.tscn" id="16_8bsq2"]
 [ext_resource type="PackedScene" uid="uid://djb5jn33c8jdk" path="res://assets/scenes/castle_kit/gate_segment.tscn" id="16_c6rqr"]
 [ext_resource type="PackedScene" uid="uid://dnjoh0k0umes7" path="res://assets/scenes/castle_kit/wall_segment.tscn" id="17_7qqfl"]
@@ -24,33 +26,11 @@
 [ext_resource type="FontFile" uid="uid://d4hiusep38mxq" path="res://assets/fonts/BlackFlag.ttf" id="21_8tu7u"]
 [ext_resource type="Script" uid="uid://d0h324qlbqt2h" path="res://assets/scripts/interactive.gd" id="22_krt3k"]
 [ext_resource type="Script" uid="uid://wnmgkq1tr3wr" path="res://assets/scripts/inventory_ui.gd" id="24_reaq6"]
-[ext_resource type="PackedScene" uid="uid://blpoilpf4lhbm" path="res://assets/scenes/item_slot.tscn" id="25_adhv8"]
 
 [sub_resource type="Resource" id="Resource_gy30a"]
 script = ExtResource("4_oagnb")
 mode = 0
-textures = [[ExtResource("5_bcbhd"), ExtResource("6_qnak0"), ExtResource("7_3kohf")], [ExtResource("7_6r52n"), ExtResource("8_i71sc"), ExtResource("10_5jrcg")]]
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0dbgi"]
-sky_top_color = Color(0.366093, 0.655184, 0.789797, 1)
-sky_horizon_color = Color(1, 1, 1, 1)
-ground_bottom_color = Color(1, 1, 1, 1)
-ground_horizon_color = Color(1, 1, 1, 1)
-
-[sub_resource type="Sky" id="Sky_ppp8c"]
-sky_material = SubResource("ProceduralSkyMaterial_0dbgi")
-
-[sub_resource type="Environment" id="Environment_phlas"]
-background_mode = 2
-background_color = Color(0.5589, 0.61749, 0.81, 1)
-sky = SubResource("Sky_ppp8c")
-ambient_light_source = 2
-ambient_light_color = Color(0.74, 0.718293, 0.6586, 1)
-ambient_light_energy = 0.5
-fog_enabled = true
-fog_light_color = Color(0.85, 0.810475, 0.7735, 1)
-fog_light_energy = 0.84
-fog_density = 0.005
+textures = [[ExtResource("7_75vcf"), ExtResource("6_qnak0"), ExtResource("9_4h4lu")], [ExtResource("10_4h4lu"), ExtResource("8_i71sc"), ExtResource("12_75vcf")]]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_p1687"]
 size = Vector3(18.1729, 27.0132, 68.1592)
@@ -279,12 +259,16 @@ material = SubResource("ShaderMaterial_hmxlg")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 249.185, -4.34028, 129.385)
 visible = false
 prot_item = ExtResource("2_1d5nw")
+prot_item_2 = ExtResource("3_adhv8")
 metadata/_edit_group_ = true
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.82853, -0.310235, -0.466146, 0.559945, 0.459043, 0.68974, 0, -0.832486, 0.554045, 229.169, 172.023, 233.315)
-light_color = Color(1, 0.8915, 0.69, 1)
-light_energy = 2.0
+transform = Transform3D(0.088144906, 0.4301752, -0.89843184, 0.6388811, 0.6675787, 0.3823217, 0.76423913, -0.6076908, -0.21598716, 267.95215, 24.197895, 136.71019)
+light_color = Color(1, 0.765, 0.53, 1)
+light_energy = 3.0
+shadow_enabled = true
+shadow_bias = 0.0
+directional_shadow_fade_start = 0.185
 
 [node name="HTerrain" type="Node3D" parent="."]
 script = ExtResource("2_vr7vr")
@@ -316,7 +300,7 @@ shader_params/u_roughness = null
 metadata/_editor_icon = ExtResource("11_618uj")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_phlas")
+environment = ExtResource("16_4h4lu")
 
 [node name="Sign" parent="." instance=ExtResource("12_oqvr1")]
 transform = Transform3D(0.994018, 0.0779684, -0.0764844, -0.0813521, 0.995793, -0.0421651, 0.0728751, 0.048135, 0.996179, 248.055, -8.44414, 123.002)
@@ -979,33 +963,24 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("24_reaq6")
 
-[node name="ColorRect" type="ColorRect" parent="InventoryUI"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
 [node name="inventory" type="ColorRect" parent="InventoryUI"]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 30.0
-offset_top = 30.0
-offset_right = -530.0
-offset_bottom = -30.0
+offset_left = 64.0
+offset_top = 512.0
+offset_right = -64.0
+offset_bottom = -64.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.6)
 
 [node name="grid" type="GridContainer" parent="InventoryUI/inventory"]
 layout_mode = 0
-offset_right = 720.0
-offset_bottom = 900.0
+offset_right = 1152.0
+offset_bottom = 384.0
+mouse_filter = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
 columns = 9
-
-[node name="ItemSlot" parent="InventoryUI/inventory/grid" instance=ExtResource("25_adhv8")]
-layout_mode = 2
-
-[node name="ItemSlot2" parent="InventoryUI/inventory/grid" instance=ExtResource("25_adhv8")]
-layout_mode = 2

@@ -18,10 +18,12 @@ var disable_control: bool = false
 var inventory : Inventory = Inventory.new()
 
 @export var prot_item : Item
+@export var prot_item_2 : Item
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	inventory.add_item(prot_item)
+	
 
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:

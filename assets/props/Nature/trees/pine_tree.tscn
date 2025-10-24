@@ -45,11 +45,14 @@ shadow_mesh = SubResource("ArrayMesh_obxt4")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ds61b"]
 resource_name = "texture_leaves"
-transparency = 1
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
 cull_mode = 2
-shading_mode = 0
-specular_mode = 2
+specular_mode = 1
+disable_specular_occlusion = true
 albedo_texture = ExtResource("3_pn5a6")
+metallic_specular = 0.0
 texture_repeat = false
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_8otn2"]
@@ -99,502 +102,502 @@ skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_jn7ym")
 
 [node name="Leaves" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-1.55947, -0.4489, -5.62969, 0.601948, 5.7939, -0.628737, 5.61539, -0.745749, -1.49604, 0.326341, 3.07002, 0.118174)
+transform = Transform3D(-1.55947, -0.4488999, -5.6296897, 0.60194814, 5.7939005, -0.62873715, 5.6153893, -0.7457494, -1.4960432, 0.326341, 3.07002, 0.118174)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves2" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-0.715698, -0.599402, -4.82846, -0.325791, 4.87537, -0.556935, 4.85461, 0.238817, -0.74922, 0.310112, 4.99277, 0.0720726)
+transform = Transform3D(-0.7156979, -0.5994019, -4.82846, -0.325791, 4.87537, -0.5569347, 4.8546095, 0.2388165, -0.7492184, 0.310112, 4.99277, 0.0720726)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves3" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-2.28312, 1.03841, 5.06798, 0.679119, 5.55181, -0.831599, -5.1285, 0.272892, -2.3663, -0.311487, 3.55917, 0.114683)
+transform = Transform3D(-2.28312, 1.0384098, 5.0679803, 0.679119, 5.55181, -0.83160204, -5.1284995, 0.2728918, -2.366299, -0.311487, 3.55917, 0.114683)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves4" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-2.98116, 0.507205, 3.54268, 0.393165, 4.6293, -0.331928, -3.55715, 0.0865918, -3.00573, -0.284762, 5.33584, 0.180758)
+transform = Transform3D(-2.9811604, 0.50720495, 3.5426843, 0.39316496, 4.6293, -0.33192846, -3.5571496, 0.08659161, -3.0057247, -0.284762, 5.33584, 0.180758)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves5" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-1.20771, -0.377404, 5.35511, -0.664123, 5.45729, 0.234829, -5.32715, -0.594786, -1.24332, -0.309444, 3.89706, 0.11428)
+transform = Transform3D(-1.2077103, -0.37740412, 5.355109, -0.66412294, 5.45729, 0.23482859, -5.32715, -0.5947865, -1.2433245, -0.309444, 3.89706, 0.11428)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves6" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-3.03084, -0.161586, 4.4003, 0.205502, 5.33092, 0.337306, -4.39846, 0.360411, -3.01634, -0.281873, 4.21011, 0.219712)
+transform = Transform3D(-3.0308402, -0.1615857, 4.400296, 0.205502, 5.33092, 0.3373058, -4.39846, 0.3604114, -3.0163455, -0.281873, 4.21011, 0.219712)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves7" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-1.3681, 0.613135, 5.49295, 0.851117, 5.6146, -0.41473, -5.46113, 0.721434, -1.44071, -0.313251, 3.46656, 0.109942)
+transform = Transform3D(-1.3681002, 0.6131353, 5.4929504, 0.851117, 5.6145997, -0.41473034, -5.4611297, 0.7214351, -1.4407074, -0.313251, 3.46656, 0.109942)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves8" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-2.39529, -0.779547, 5.3465, -0.761958, 5.83863, 0.509937, -5.34904, -0.482619, -2.46679, -0.302543, 2.91221, 0.166618)
+transform = Transform3D(-2.3952897, -0.7795471, 5.3465, -0.761958, 5.83863, 0.5099359, -5.34904, -0.48261926, -2.4667914, -0.302543, 2.91221, 0.166618)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves9" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-3.46558, -0.0781407, -1.43746, 0.0929523, 3.72719, -0.426711, 1.43658, -0.42967, -3.4401, 0.129511, 8.18957, 0.268444)
+transform = Transform3D(-3.46558, -0.07814105, -1.4374621, 0.0929523, 3.72719, -0.42671067, 1.4365797, -0.4296699, -3.4400992, 0.129511, 8.18957, 0.268444)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves10" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-4.1942, 0.0437544, -0.424044, 0.0041352, 4.19752, 0.392215, 0.426275, 0.389788, -4.17605, 0.067519, 6.62839, 0.292811)
+transform = Transform3D(-4.1942005, 0.04375437, -0.42404395, 0.0041352003, 4.1975203, 0.39221454, 0.4262753, 0.38978803, -4.1760507, 0.067519, 6.62839, 0.292811)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves11" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-3.34086, -0.684001, -1.59611, -0.599355, 3.70233, -0.332081, 1.62978, -0.0405824, -3.39396, 0.13722, 8.15913, 0.2684)
+transform = Transform3D(-3.3408597, -0.6840008, -1.5961087, -0.59935504, 3.7023304, -0.33208138, 1.6297802, -0.04058249, -3.3939607, 0.13722, 8.15913, 0.2684)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves12" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-3.02779, 0.0935993, -3.41514, 0.643025, 4.49737, -0.446833, 3.35536, -0.777419, -2.9961, 0.254054, 5.55506, 0.235015)
+transform = Transform3D(-3.0277896, 0.09359947, -3.4151392, 0.64302504, 4.49737, -0.44683257, 3.3553605, -0.77741915, -2.996101, 0.254054, 5.55506, 0.235015)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves13" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(1.94946, -0.192892, -4.11485, -0.0726468, 4.55005, -0.24771, 4.11873, 0.171554, 1.94326, 0.291399, 5.59356, -0.0968919)
+transform = Transform3D(1.9494599, -0.19289227, -4.1148524, -0.07264679, 4.5500493, -0.24771054, 4.11873, 0.17155342, 1.9432553, 0.291399, 5.59356, -0.0968919)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves14" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-0.024326, 0.572545, -3.37427, 0.218035, 3.36776, 0.569869, 3.41555, -0.210907, -0.0604104, 0.258204, 8.97831, -0.0263189)
+transform = Transform3D(-0.024325898, 0.572545, -3.3742702, 0.21803498, 3.36776, 0.56986856, 3.41555, -0.21090655, -0.060410023, 0.258204, 8.97831, -0.0263189)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves15" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(0.309148, 0.254514, -4.24311, 0.579359, 4.2121, 0.294865, 4.21107, -0.598185, 0.270933, 0.286098, 6.55986, -0.0647345)
+transform = Transform3D(0.3091481, 0.25451398, -4.24311, 0.57935894, 4.2121, 0.29486454, 4.21107, -0.59818536, 0.27093276, 0.286098, 6.55986, -0.0647345)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves16" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(2.43197, 0.391767, -3.33706, 0.0909981, 4.11028, 0.54886, 3.35874, -0.395027, 2.4014, 0.246023, 6.99563, -0.20521)
+transform = Transform3D(2.4319701, 0.39176697, -3.3370593, 0.0909981, 4.11028, 0.54886, 3.3587396, -0.39502713, 2.4014015, 0.246023, 6.99563, -0.20521)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves17" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(2.00736, 0.0924613, -3.45396, 0.536169, 3.93782, 0.417023, 3.41334, -0.672931, 1.96574, 0.244278, 7.5339, -0.185038)
+transform = Transform3D(2.00736, 0.09246157, -3.453959, 0.536169, 3.9378202, 0.41702414, 3.41334, -0.67293054, 1.9657415, 0.244278, 7.5339, -0.185038)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves18" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(0.692662, 0.254132, -3.98195, 0.231841, 4.03212, 0.297662, 3.98331, -0.278873, 0.675101, 0.280838, 7.34056, -0.0378954)
+transform = Transform3D(0.69266176, 0.25413197, -3.9819503, 0.231841, 4.03212, 0.29766184, 3.9833097, -0.27887318, 0.67510045, 0.280838, 7.34056, -0.0378954)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves19" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(0.95353, -0.300254, -3.40564, 0.400062, 3.52113, -0.198424, 3.39537, -0.33056, 0.979795, 0.240195, 8.68869, -0.135807)
+transform = Transform3D(0.95353025, -0.30025366, -3.4056404, 0.40006196, 3.5211306, -0.19842392, 3.3953702, -0.33055878, 0.9797938, 0.240195, 8.68869, -0.135807)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves20" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(0.642099, -0.168822, 5.74067, 0.856716, 5.71462, 0.0722312, -5.67889, 0.843018, 0.659981, -0.32307, 3.26098, -0.0806895)
+transform = Transform3D(0.6420994, -0.16882205, 5.74067, 0.8567159, 5.7146196, 0.07223149, -5.6788898, 0.84301776, 0.6599815, -0.32307, 3.26098, -0.0806895)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves21" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(1.02874, -0.763511, 5.82731, -0.546879, 5.87781, 0.866672, -5.85162, -0.683555, 0.943469, -0.324553, 2.75661, -0.0921904)
+transform = Transform3D(1.0287402, -0.7635109, 5.8273096, -0.546879, 5.87781, 0.8666711, -5.85162, -0.6835552, 0.94346917, -0.324553, 2.75661, -0.0921904)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves22" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-0.328004, 0.685114, 4.98256, -0.332451, 4.97927, -0.706547, -5.01844, -0.374635, -0.278853, -0.321609, 4.75956, -0.0388117)
+transform = Transform3D(-0.3280042, 0.685114, 4.98256, -0.332451, 4.9792705, -0.7065473, -5.01844, -0.37463507, -0.27885324, -0.321609, 4.75956, -0.0388117)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves23" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(2.74237, 0.701112, 5.0759, -0.377211, 5.76913, -0.593068, -5.11019, -0.0496017, 2.76775, -0.310849, 3.17987, -0.136777)
+transform = Transform3D(2.7423694, 0.70111173, 5.075902, -0.377211, 5.76913, -0.5930687, -5.11019, -0.0496013, 2.7677464, -0.310849, 3.17987, -0.136777)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves24" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(1.95789, 0.292588, -4.24641, -0.261, 4.67356, 0.20168, 4.24847, 0.152277, 1.96933, 0.272149, 5.35603, -0.181428)
+transform = Transform3D(1.9578904, 0.292588, -4.2464094, -0.26099998, 4.67356, 0.20168024, 4.2484694, 0.15227692, 1.969331, 0.272149, 5.35603, -0.181428)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves25" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(3.31897, -1.11309, -4.28944, 0.0198647, 5.36278, -1.37625, 4.43147, 0.809618, 3.21877, 0.287946, 3.86241, -0.199733)
+transform = Transform3D(3.3189697, -1.1130917, -4.289443, 0.019864703, 5.3627806, -1.3762467, 4.4314704, 0.8096157, 3.2187674, 0.287946, 3.86241, -0.199733)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves26" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-0.335163, -0.00338075, -5.06819, 0.836493, 5.00957, -0.0586596, 4.99869, -0.83854, -0.330008, 0.328066, 4.73512, -0.0209949)
+transform = Transform3D(-0.33516306, -0.0033807245, -5.0681896, 0.836493, 5.00957, -0.05865936, 4.99869, -0.8385403, -0.3300068, 0.328066, 4.73512, -0.0209949)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves27" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(2.52881, 0.318949, -5.12666, -0.0508289, 5.71554, 0.330513, 5.13632, -0.10047, 2.52732, 0.318098, 3.4208, -0.129169)
+transform = Transform3D(2.5288105, 0.31894898, -5.126658, -0.0508289, 5.7155404, 0.33051345, 5.1363196, -0.10047014, 2.527324, 0.318098, 3.4208, -0.129169)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves28" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(1.45606, -1.0896, -5.51003, 0.915706, 5.66206, -0.877684, 5.54158, -0.649318, 1.5928, 0.348549, 3.22342, -0.0488933)
+transform = Transform3D(1.4560604, -1.0896007, -5.5100293, 0.915706, 5.66206, -0.8776831, 5.5415807, -0.6493197, 1.5928011, 0.348549, 3.22342, -0.0488933)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves29" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-4.77318, -0.809936, -3.5398, -0.659234, 5.9425, -0.47076, 3.57094, 0.014429, -4.81847, 0.246778, 2.67944, 0.260815)
+transform = Transform3D(-4.77318, -0.8099364, -3.539803, -0.659234, 5.9425006, -0.47075948, 3.5709403, 0.014429358, -4.818467, 0.246778, 2.67944, 0.260815)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves30" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-5.89983, -0.249142, -0.791886, -0.0691654, 5.81107, -1.31296, 0.827268, -1.29096, -5.75728, 0.0147958, 2.80352, 0.338938)
+transform = Transform3D(-5.89983, -0.24914181, -0.79188704, -0.06916541, 5.8110704, -1.3129612, 0.8272674, -1.2909601, -5.75728, 0.0147958, 2.80352, 0.338938)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves31" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-3.78472, -0.751453, -4.44961, -0.909774, 5.81522, -0.208247, 4.41995, 0.553512, -3.85298, 0.263553, 2.98265, 0.252804)
+transform = Transform3D(-3.7847195, -0.75145316, -4.4496098, -0.90977407, 5.81522, -0.2082468, 4.41995, 0.55351233, -3.8529809, 0.263553, 2.98265, 0.252804)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves32" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(5.2743, 0.0929253, -0.0330916, -0.0909648, 5.26644, 0.290399, 0.038152, -0.289777, 5.26712, -0.0251704, 4.35991, -0.32179)
+transform = Transform3D(5.2743, 0.09292536, -0.03309162, -0.090964794, 5.26644, 0.29039833, 0.038152, -0.289777, 5.2671204, -0.0251704, 4.35991, -0.32179)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves33" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(3.47281, 1.29088, 4.50343, -1.03495, 5.67875, -0.829676, -4.56904, -0.305154, 3.61088, -0.259194, 3.13376, -0.275386)
+transform = Transform3D(3.47281, 1.2908779, 4.5034328, -1.0349499, 5.678751, -0.8296752, -4.5690403, -0.30515143, 3.6108766, -0.259194, 3.13376, -0.275386)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves34" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(5.49447, 0.432432, 0.559974, -0.39739, 5.5139, -0.358832, -0.585363, 0.315725, 5.49977, -0.0451182, 3.82035, -0.335265)
+transform = Transform3D(5.49447, 0.4324316, 0.55997497, -0.39739, 5.5139, -0.3588324, -0.58536303, 0.315725, 5.49977, -0.0451182, 3.82035, -0.335265)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves35" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-1.90546, 0.355139, -2.23324, 0.05057, 2.92633, 0.42221, 2.26074, 0.23387, -1.89173, 0.189294, 10.8422, 0.210518)
+transform = Transform3D(-1.9054598, 0.35513917, -2.233242, 0.05057, 2.92633, 0.4222113, 2.2607403, 0.23386982, -1.8917273, 0.189294, 10.8422, 0.210518)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves36" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-2.23828, -0.112652, -2.31588, -0.338557, 3.20029, 0.17154, 2.29377, 0.362431, -2.23454, 0.218538, 9.66261, 0.19703)
+transform = Transform3D(-2.23828, -0.11265209, -2.3158817, -0.338557, 3.2002897, 0.1715398, 2.29377, 0.36243108, -2.2345378, 0.218538, 9.66261, 0.19703)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves37" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-0.778807, -0.0473256, 3.1814, -0.356915, 3.25594, -0.0389386, -3.16167, -0.3559, -0.779272, -0.224326, 9.54906, 0.0577779)
+transform = Transform3D(-0.7788067, -0.047325425, 3.1814003, -0.356915, 3.2559402, -0.038938373, -3.1616702, -0.3558994, -0.7792712, -0.224326, 9.54906, 0.0577779)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves38" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(3.11146, -0.484777, 1.09639, 0.500363, 3.29644, 0.0375565, -1.08936, 0.129479, 3.14878, -0.0183242, 9.2751, -0.244977)
+transform = Transform3D(3.11146, -0.48477784, 1.0963871, 0.500363, 3.29644, 0.037556335, -1.0893601, 0.1294793, 3.148781, -0.0183242, 9.2751, -0.244977)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves39" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(3.76721, 0.0141659, 0.219366, 0.0225082, 3.72112, -0.626834, -0.218668, 0.627078, 3.71472, 0.0178342, 8.20739, -0.276397)
+transform = Transform3D(3.76721, 0.014165968, 0.21936639, 0.0225082, 3.72112, -0.6268346, -0.21866797, 0.627078, 3.71472, 0.0178342, 8.20739, -0.276397)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves40" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(4.10629, -0.262697, 1.61547, 0.122412, 4.40022, 0.404379, -1.63211, -0.330904, 4.09477, -0.121282, 5.98089, -0.242292)
+transform = Transform3D(4.10629, -0.2626973, 1.6154755, 0.122411996, 4.40022, 0.40437877, -1.6321102, -0.3309039, 4.0947676, -0.121282, 5.98089, -0.242292)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves41" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(3.36327, -0.363791, 0.382489, 0.382713, 3.37949, -0.150955, -0.363555, 0.192127, 3.37952, 0.00489584, 9.08136, -0.260926)
+transform = Transform3D(3.36327, -0.36379063, 0.382489, 0.382713, 3.37949, -0.150955, -0.36355498, 0.19212696, 3.3795202, 0.00489584, 9.08136, -0.260926)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves42" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(4.45577, 0.302789, 0.90519, -0.193961, 4.51856, -0.556709, -0.934575, 0.50583, 4.43121, -0.0461465, 5.56885, -0.270716)
+transform = Transform3D(4.45577, 0.30278945, 0.90519, -0.19396098, 4.5185595, -0.55670846, -0.9345751, 0.5058299, 4.43121, -0.0461465, 5.56885, -0.270716)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves43" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(4.3696, 0.316404, 0.360304, -0.353912, 4.35669, 0.466229, -0.323537, -0.492455, 4.35616, -0.0358651, 6.07118, -0.269724)
+transform = Transform3D(4.3695993, 0.31640363, 0.3603037, -0.35391197, 4.35669, 0.46622813, -0.32353702, -0.49245498, 4.35616, -0.0358651, 6.07118, -0.269724)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves44" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(4.45284, -0.813513, 0.367563, 0.767483, 4.44374, 0.537474, -0.455934, -0.464872, 4.49452, -0.0349388, 5.61376, -0.273762)
+transform = Transform3D(4.45284, -0.8135135, 0.36756375, 0.76748294, 4.4437394, 0.537474, -0.455934, -0.4648719, 4.49452, -0.0349388, 5.61376, -0.273762)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves45" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-1.40714, -0.00894681, 4.16913, -0.0176249, 4.40016, 0.00349395, -4.1691, -0.0155821, -1.40716, -0.296952, 6.02321, 0.0767497)
+transform = Transform3D(-1.4071401, -0.008946784, 4.1691284, -0.0176249, 4.40016, 0.0034939235, -4.1691, -0.015582021, -1.4071646, -0.296952, 6.02321, 0.0767497)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves46" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-0.84992, 0.115871, 3.5353, 0.489624, 3.60478, -0.000438222, -3.50315, 0.475716, -0.857782, -0.240134, 8.50188, 0.0893827)
+transform = Transform3D(-0.8499201, 0.115871064, 3.5353003, 0.48962396, 3.60478, -0.00043786727, -3.5031497, 0.47571632, -0.85778147, -0.240134, 8.50188, 0.0893827)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves47" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-1.86166, -0.701676, 3.04863, -0.707082, 3.55019, 0.385333, -3.04739, -0.395091, -1.95183, -0.225381, 8.49297, 0.169901)
+transform = Transform3D(-1.8616606, -0.7016756, 3.048632, -0.707082, 3.5501902, 0.3853322, -3.0473897, -0.39509013, -1.9518273, -0.225381, 8.49297, 0.169901)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves48" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-2.45161, 0.00628992, -3.37796, 0.35848, 4.15076, -0.252445, 3.35889, -0.438403, -2.43859, 0.26126, 6.87972, 0.174054)
+transform = Transform3D(-2.4516103, 0.0062894174, -3.3779614, 0.35847998, 4.15076, -0.25244465, 3.35889, -0.43840235, -2.438588, 0.26126, 6.87972, 0.174054)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves49" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-0.70764, 0.328913, -3.56858, -0.0379547, 3.6366, 0.342708, 3.58351, 0.103468, -0.701062, 0.264228, 8.45166, 0.043625)
+transform = Transform3D(-0.7076402, 0.32891303, -3.56858, -0.037954703, 3.6366, 0.34270743, 3.58351, 0.10346786, -0.7010621, 0.264228, 8.45166, 0.043625)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves50" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(0.0934201, -0.583322, -3.77416, -0.669438, 3.71434, -0.590645, 3.75984, 0.675829, -0.011388, 0.276594, 8.04594, 0.00987452)
+transform = Transform3D(0.09342019, -0.5833219, -3.77416, -0.669438, 3.71434, -0.59064436, 3.75984, 0.6758304, -0.011387996, 0.276594, 8.04594, 0.00987452)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves51" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-1.26273, 0.073451, -4.36013, 0.409289, 4.5212, -0.0423692, 4.34149, -0.404867, -1.26416, 0.302391, 5.63746, 0.0613923)
+transform = Transform3D(-1.26273, 0.07345117, -4.360131, 0.409289, 4.5212, -0.042369217, 4.34149, -0.40486762, -1.2641575, 0.302391, 5.63746, 0.0613923)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves52" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-2.26084, 0.28348, -2.73355, 0.163619, 3.54728, 0.232543, 2.74334, 0.0220535, -2.26664, 0.236931, 8.64813, 0.189286)
+transform = Transform3D(-2.26084, 0.28347996, -2.7335496, 0.163619, 3.54728, 0.23254263, 2.74334, 0.022053538, -2.266641, 0.236931, 8.64813, 0.189286)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves53" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-2.15757, 0.596171, -3.35285, 0.545539, 3.97838, 0.356341, 3.36146, -0.263006, -2.20987, 0.261641, 7.39629, 0.139989)
+transform = Transform3D(-2.1575694, 0.5961706, -3.352848, 0.545539, 3.9783802, 0.35634124, 3.3614604, -0.26300535, -2.2098732, 0.261641, 7.39629, 0.139989)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves54" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(1.46186, -0.202639, 3.14446, -0.252097, 3.44775, 0.339385, -3.14088, -0.371042, 1.43629, -0.224796, 8.88621, -0.0780554)
+transform = Transform3D(1.4618598, -0.20263916, 3.1444614, -0.252097, 3.4477503, 0.3393846, -3.1408799, -0.37104174, 1.4362867, -0.224796, 8.88621, -0.0780554)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves55" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(2.6613, -0.497067, 3.38005, 0.582185, 4.28786, 0.172182, -3.36644, 0.348584, 2.70184, -0.265844, 6.28115, -0.155227)
+transform = Transform3D(2.6613, -0.49706647, 3.380052, 0.582185, 4.2878604, 0.17218262, -3.3664403, 0.3485833, 2.7018378, -0.265844, 6.28115, -0.155227)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves56" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(1.09622, 0.589206, 3.43773, 0.285281, 3.5763, -0.703926, -3.47617, 0.479306, 1.02633, -0.249398, 8.4676, -0.0289456)
+transform = Transform3D(1.0962201, 0.5892059, 3.4377306, 0.285281, 3.5763001, -0.7039277, -3.4761703, 0.4793062, 1.0263283, -0.249398, 8.4676, -0.0289456)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves57" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-0.188153, 0.537279, 4.47885, 0.00120569, 4.48275, -0.537696, -4.51096, -0.0212118, -0.186957, -0.314168, 5.66651, -0.030567)
+transform = Transform3D(-0.18815295, 0.537279, 4.47885, 0.0012056899, 4.48275, -0.5376962, -4.51096, -0.021211853, -0.18695734, -0.314168, 5.66651, -0.030567)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves58" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(2.31588, 0.132073, 2.89408, -0.227695, 3.70195, 0.0132647, -2.88813, -0.185951, 2.3196, -0.21919, 8.35387, -0.140528)
+transform = Transform3D(2.31588, 0.13207296, 2.8940775, -0.227695, 3.70195, 0.013264101, -2.8881297, -0.18595092, 2.3196032, -0.21919, 8.35387, -0.140528)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves59" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-1.82648, -0.229211, -0.308369, -0.0987576, 1.7277, -0.699256, 0.371317, -0.667963, -1.70282, 0.0460923, 13.5587, 0.168498)
+transform = Transform3D(-1.82648, -0.22921114, -0.3083689, -0.0987576, 1.7276999, -0.6992548, 0.3713171, -0.66796297, -1.7028204, 0.0460923, 13.5587, 0.168498)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves60" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-1.37725, -0.313502, -0.586661, -0.207365, 1.48408, -0.306253, 0.632024, -0.196235, -1.37888, 0.0579379, 15.0184, 0.125322)
+transform = Transform3D(-1.3772498, -0.31350255, -0.58666134, -0.20736499, 1.48408, -0.30625305, 0.63202417, -0.19623475, -1.3788799, 0.0579379, 15.0184, 0.125322)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves61" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(0.702585, -0.879311, -1.40501, -0.014912, 1.52261, -0.960366, 1.65742, 0.386442, 0.58695, 0.121128, 14.8683, -0.0608606)
+transform = Transform3D(0.702585, -0.8793112, -1.405011, -0.014912003, 1.52261, -0.9603661, 1.6574202, 0.38644156, 0.58694756, 0.121128, 14.8683, -0.0608606)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves62" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(0.470437, -0.80756, -1.59003, 0.0305275, 1.64783, -0.827883, 1.78309, 0.184849, 0.433674, 0.13008, 14.7367, -0.028264)
+transform = Transform3D(0.47043708, -0.80756015, -1.5900298, 0.030527497, 1.6478299, -0.82788223, 1.7830899, 0.18484885, 0.43367538, 0.13008, 14.7367, -0.028264)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves63" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(0.690908, -0.0173761, -2.51372, -0.289865, 2.589, -0.0975671, 2.49701, 0.305351, 0.684205, 0.170326, 13.0127, -0.0281691)
+transform = Transform3D(0.69090813, -0.01737597, -2.51372, -0.289865, 2.5889997, -0.09756721, 2.49701, 0.30535147, 0.68420553, 0.170326, 13.0127, -0.0281691)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves64" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(0.923162, -0.280155, 2.99271, 0.392136, 3.11515, 0.170655, -2.98011, 0.32312, 0.949522, -0.198849, 10.4001, -0.0855781)
+transform = Transform3D(0.92316204, -0.2801551, 2.9927108, 0.392136, 3.1151502, 0.17065431, -2.98011, 0.32312024, 0.94952095, -0.198849, 10.4001, -0.0855781)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves65" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(1.70841, 0.308756, 2.80719, 0.253107, 3.25093, -0.511599, -2.81275, 0.480069, 1.659, -0.208911, 9.41481, -0.0929064)
+transform = Transform3D(1.7084103, 0.30875584, 2.8071916, 0.253107, 3.25093, -0.51159835, -2.81275, 0.48006928, 1.6589975, -0.208911, 9.41481, -0.0929064)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves66" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(0.9435, -0.301969, 2.89337, -0.185183, 3.02934, 0.376546, -2.90318, -0.291366, 0.916292, -0.201134, 11.002, -0.0401043)
+transform = Transform3D(0.9435, -0.30196884, 2.8933697, -0.185183, 3.0293398, 0.37654564, -2.90318, -0.29136667, 0.9162933, -0.201134, 11.002, -0.0401043)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves67" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(0.819878, -0.254762, -3.12355, 0.272586, 3.22224, -0.191262, 3.12205, -0.21443, 0.836972, 0.227278, 9.73402, -0.110515)
+transform = Transform3D(0.81987786, -0.2547622, -3.1235502, 0.27258602, 3.22224, -0.19126143, 3.12205, -0.2144308, 0.8369708, 0.227278, 9.73402, -0.110515)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves68" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-2.4596, 0.25059, -2.12107, -0.0383866, 3.22931, 0.426033, 2.13548, 0.346673, -2.43535, 0.201637, 9.45812, 0.271818)
+transform = Transform3D(-2.4596, 0.25059, -2.1210725, -0.038386595, 3.22931, 0.4260319, 2.13548, 0.34667307, -2.4353478, 0.201637, 9.45812, 0.271818)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves69" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-2.1566, -0.316327, -1.92353, -0.475275, 2.86728, 0.0613352, 1.89054, 0.35998, -2.17882, 0.179722, 10.9971, 0.231729)
+transform = Transform3D(-2.1566002, -0.3163268, -1.9235331, -0.47527498, 2.8672798, 0.061335117, 1.8905399, 0.35997972, -2.1788173, 0.179722, 10.9971, 0.231729)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves70" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-2.29883, -0.00213488, -0.326852, 0.0117547, 2.31986, -0.0978264, 0.326647, -0.098507, -2.29674, 0.0426017, 11.9917, 0.209795)
+transform = Transform3D(-2.29883, -0.0021349022, -0.32685044, 0.011754698, 2.31986, -0.09782607, 0.32664716, -0.098507, -2.2967403, 0.0426017, 11.9917, 0.209795)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves71" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(2.70319, 0.286121, 1.26169, -0.381361, 2.96899, 0.143779, -1.23624, -0.290248, 2.71449, -0.0618287, 11.4519, -0.216551)
+transform = Transform3D(2.70319, 0.28612143, 1.2616916, -0.381361, 2.96899, 0.14377905, -1.2362401, -0.2902482, 2.7144892, -0.0618287, 11.4519, -0.216551)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves72" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(1.60883, 0.0972034, 1.27079, 0.253542, 1.98119, -0.472528, -1.24903, 0.527369, 1.54094, -0.0906516, 14.1714, -0.157691)
+transform = Transform3D(1.6088302, 0.09720374, 1.2707902, 0.253542, 1.98119, -0.47252855, -1.2490299, 0.52736866, 1.5409397, -0.0906516, 14.1714, -0.157691)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves73" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-0.481448, -0.873255, -2.0695, -0.214705, 2.1247, -0.8466, 2.23591, 0.0159922, -0.526911, 0.159093, 13.4884, 0.0279873)
+transform = Transform3D(-0.48144794, -0.87325495, -2.0694993, -0.21470499, 2.1246998, -0.8466015, 2.2359097, 0.015992094, -0.5269111, 0.159093, 13.4884, 0.0279873)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves74" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-0.923875, -0.559504, -1.15345, 0.248524, 1.31663, -0.837715, 1.25767, -0.671183, -0.681779, 0.108661, 15.212, 0.076652)
+transform = Transform3D(-0.9238752, -0.5595042, -1.1534511, 0.24852398, 1.3166301, -0.83771354, 1.2576699, -0.6711826, -0.6817789, 0.108661, 15.212, 0.076652)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves75" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(1.41998, -0.536898, -1.06859, 0.0165263, 1.66751, -0.815857, 1.19577, 0.614522, 1.28023, 0.110953, 14.6898, -0.140669)
+transform = Transform3D(1.4199802, -0.53689814, -1.0685899, 0.016526302, 1.6675102, -0.8158588, 1.19577, 0.6145219, 1.2802291, 0.110953, 14.6898, -0.140669)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves76" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(1.55689, -0.284098, -0.469393, 0.0859451, 1.52106, -0.635552, 0.541899, 0.574979, 1.44937, 0.061557, 15.3033, -0.126082)
+transform = Transform3D(1.5568899, -0.28409737, -0.4693911, 0.0859451, 1.5210601, -0.6355509, 0.54189897, 0.5749792, 1.4493711, 0.061557, 15.3033, -0.126082)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves77" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(1.36346, -0.591008, -0.588477, 0.197685, 1.32462, -0.8723, 0.810257, 0.671339, 1.20308, 0.075757, 15.448, -0.121684)
+transform = Transform3D(1.3634601, -0.5910074, -0.5884754, 0.19768499, 1.32462, -0.8723015, 0.810257, 0.6713394, 1.2030796, 0.075757, 15.448, -0.121684)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves78" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(2.4547, -0.13458, -1.54134, -0.140139, 2.8594, -0.472848, 1.54084, 0.47446, 2.41249, 0.123551, 12.0821, -0.209441)
+transform = Transform3D(2.4547, -0.13457999, -1.5413394, -0.140139, 2.8594, -0.4728487, 1.5408399, 0.47446004, 2.4124901, 0.123551, 12.0821, -0.209441)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves79" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(2.7628, 0.0183077, -0.799255, 0.0810707, 2.85415, 0.345616, 0.795343, -0.354525, 2.74116, 0.0525935, 12.2791, -0.218424)
+transform = Transform3D(2.7627997, 0.018307881, -0.79925495, 0.08107069, 2.8541498, 0.3456168, 0.79534304, -0.3545249, 2.7411597, 0.0525935, 12.2791, -0.218424)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves80" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-2.80327, 0.215518, 0.760179, 0.141052, 2.89355, -0.300199, -0.777448, -0.252125, -2.79547, -0.0695532, 10.8025, 0.226438)
+transform = Transform3D(-2.80327, 0.21551797, 0.7601798, 0.141052, 2.89355, -0.3001988, -0.7774481, -0.25212497, -2.79547, -0.0695532, 10.8025, 0.226438)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves81" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-2.88002, -0.171324, 1.00292, -0.29061, 3.02393, -0.317961, -0.975062, -0.395223, -2.86753, -0.0286991, 10.0894, 0.238192)
+transform = Transform3D(-2.88002, -0.17132422, 1.0029176, -0.29061, 3.02393, -0.31796056, -0.975062, -0.3952231, -2.867531, -0.0286991, 10.0894, 0.238192)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves82" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-2.40313, 0.0971473, 0.95125, -0.15431, 2.49987, -0.645131, -0.943665, -0.656177, -2.31695, -0.0740349, 12.0612, 0.205792)
+transform = Transform3D(-2.40313, 0.097146876, 0.9512493, -0.15431002, 2.49987, -0.6451299, -0.9436652, -0.6561771, -2.3169506, -0.0740349, 12.0612, 0.205792)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves83" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-2.75222, -0.175971, 0.283565, -0.154593, 2.75991, 0.212262, -0.295763, 0.194907, -2.74966, -0.0234134, 10.9695, 0.225032)
+transform = Transform3D(-2.7522202, -0.17597033, 0.28356504, -0.15459299, 2.75991, 0.21226314, -0.29576308, 0.19490707, -2.7496598, -0.0234134, 10.9695, 0.225032)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves84" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-2.63652, -0.287106, 1.02093, -0.395156, 2.80466, -0.231754, -0.98416, -0.356971, -2.64196, -0.12061, 11.7859, 0.208111)
+transform = Transform3D(-2.6365197, -0.28710636, 1.0209259, -0.39515606, 2.80466, -0.23175347, -0.98415977, -0.35697114, -2.6419613, -0.12061, 11.7859, 0.208111)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves85" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-2.30625, 0.576739, 1.41048, 0.452549, 2.70237, -0.365036, -1.45508, -0.0736393, -2.34908, -0.119063, 12.2223, 0.200519)
+transform = Transform3D(-2.30625, 0.5767395, 1.4104747, 0.452549, 2.7023697, -0.36503544, -1.4550798, -0.07363909, -2.3490832, -0.119063, 12.2223, 0.200519)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves86" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(3.05621, 0.0226154, -3.15511, 0.237615, 4.37845, 0.261551, 3.14623, -0.352644, 3.04509, 0.211477, 6.09898, -0.219646)
+transform = Transform3D(3.0562103, 0.02261478, -3.1551137, 0.237615, 4.3784504, 0.26155043, 3.1462302, -0.3526446, 3.0450864, 0.211477, 6.09898, -0.219646)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves87" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(3.47864, -0.0456261, 0.418311, 0.0916178, 3.48189, -0.382108, -0.410697, 0.39028, 3.45789, 0.0768382, 8.82993, -0.278839)
+transform = Transform3D(3.47864, -0.045625955, 0.41831088, 0.09161779, 3.4818897, -0.3821084, -0.410697, 0.39027995, 3.45789, 0.0768382, 8.82993, -0.278839)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves88" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(4.2959, 0.443682, -1.57759, -0.144583, 4.5115, 0.875107, 1.6324, -0.768026, 4.22916, 0.109476, 5.49515, -0.252067)
+transform = Transform3D(4.2958994, 0.44368172, -1.5775871, -0.144583, 4.5115, 0.87510854, 1.6324002, -0.76802605, 4.2291603, 0.109476, 5.49515, -0.252067)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves89" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(5.71372, 0.704675, 0.417893, -0.62883, 5.65938, -0.945382, -0.525142, 0.890284, 5.67885, 0.00934934, 3.27035, -0.346897)
+transform = Transform3D(5.71372, 0.7046746, 0.41789234, -0.62883, 5.6593804, -0.94538057, -0.5251421, 0.890284, 5.6788507, 0.00934934, 3.27035, -0.346897)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves90" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(3.36219, 0.39305, -3.15742, -0.180613, 4.60976, 0.381517, 3.17666, -0.153911, 3.36352, 0.229516, 5.4497, -0.215572)
+transform = Transform3D(3.3621902, 0.39304945, -3.1574204, -0.18061298, 4.60976, 0.38151807, 3.1766598, -0.1539115, 3.363519, 0.229516, 5.4497, -0.215572)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves91" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(5.4027, -0.888415, -1.7186, 1.01331, 5.64207, 0.268885, 1.64805, -0.556608, 5.46865, 0.120776, 3.37006, -0.309199)
+transform = Transform3D(5.4027, -0.8884164, -1.7185984, 1.01331, 5.64207, 0.26888466, 1.6480497, -0.5566084, 5.468651, 0.120776, 3.37006, -0.309199)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves92" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(4.75792, -0.246047, -1.84782, 0.078586, 5.08733, -0.475055, 1.86247, 0.413901, 4.74053, 0.114833, 4.67093, -0.27391)
+transform = Transform3D(4.75792, -0.24604686, -1.8478168, 0.078586, 5.0873303, -0.47505477, 1.86247, 0.41390103, 4.7405314, 0.114833, 4.67093, -0.27391)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves93" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-5.17205, 0.39666, 2.01082, 0.333568, 5.5483, -0.236501, -2.02224, -0.0993017, -5.18184, -0.0929823, 3.76321, 0.299976)
+transform = Transform3D(-5.17205, 0.39666024, 2.0108151, 0.333568, 5.5482993, -0.23650053, -2.0222397, -0.0993016, -5.181842, -0.0929823, 3.76321, 0.299976)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves94" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-4.1763, 0.730006, 1.82408, 0.893991, 4.52175, 0.237204, -1.74956, 0.567959, -4.23298, -0.132583, 5.38563, 0.275165)
+transform = Transform3D(-4.1763, 0.7300063, 1.8240807, 0.893991, 4.52175, 0.23720223, -1.7495601, 0.56795913, -4.23298, -0.132583, 5.38563, 0.275165)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves95" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-3.86362, -0.903263, 3.19537, -0.57602, 5.01038, 0.719842, -3.27024, 0.18463, -3.90196, -0.198671, 4.65083, 0.260443)
+transform = Transform3D(-3.8636198, -0.9032628, 3.1953714, -0.57602, 5.0103793, 0.7198415, -3.27024, 0.18463013, -3.9019587, -0.198671, 4.65083, 0.260443)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves96" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-3.63783, 0.043736, 3.25728, -0.183846, 4.87221, -0.270745, -3.25238, -0.324329, -3.628, -0.272515, 4.98903, 0.234971)
+transform = Transform3D(-3.63783, 0.04373613, 3.257277, -0.183846, 4.87221, -0.27074507, -3.2523804, -0.3243289, -3.628003, -0.272515, 4.98903, 0.234971)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves97" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-3.22838, -0.0451474, 1.62793, -0.367527, 3.54145, -0.630633, -1.58655, -0.728516, -3.16651, -0.101546, 8.51744, 0.256473)
+transform = Transform3D(-3.2283804, -0.04514712, 1.6279359, -0.367527, 3.54145, -0.6306325, -1.5865499, -0.7285157, -3.166507, -0.101546, 8.51744, 0.256473)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves98" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-3.54144, 0.571886, 2.73189, -0.0464438, 4.40076, -0.98145, -2.79072, -0.798967, -3.45045, -0.17551, 5.6276, 0.260017)
+transform = Transform3D(-3.54144, 0.57188696, 2.7318892, -0.046443805, 4.40076, -0.98145, -2.79072, -0.7989664, -3.4504504, -0.17551, 5.6276, 0.260017)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves99" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-3.66866, -0.0424785, -0.435222, -0.0856903, 3.6757, 0.363561, 0.428812, 0.3711, -3.65084, -0.0112756, 8.31418, 0.266906)
+transform = Transform3D(-3.6686602, -0.042478606, -0.43522125, -0.0856903, 3.6757, 0.3635605, 0.4288123, 0.37110004, -3.6508403, -0.0112756, 8.31418, 0.266906)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 
 [node name="Leaves100" type="MeshInstance3D" parent="pine_tree_1/Tree"]
-transform = Transform3D(-4.4442, 0.194287, -0.275237, 0.15022, 4.40194, 0.681716, 0.301557, 0.670488, -4.3959, 0.0199039, 5.72915, 0.318502)
+transform = Transform3D(-4.4442, 0.19428684, -0.27523634, 0.15022, 4.40194, 0.681716, 0.30155665, 0.6704881, -4.3959, 0.0199039, 5.72915, 0.318502)
 mesh = SubResource("ArrayMesh_udfas")
 skeleton = NodePath("")
 

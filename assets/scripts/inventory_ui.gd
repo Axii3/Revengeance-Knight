@@ -11,7 +11,7 @@ var inventory: Inventory
 var inventory_slots: Array[Control]
 
 
-const SLOT_WIDTH = 80
+const SLOT_WIDTH = 128
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -32,6 +32,7 @@ func create_inventory():
 			new_slot.custom_minimum_size.y = SLOT_WIDTH
 			new_slot.icon = inventory.get_item(slot).icon
 			inventory_slots.append(new_slot)
+			new_slot.update()
 		
 
 

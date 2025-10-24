@@ -3,7 +3,7 @@ class_name Inventory
 
 
 
-const SIZE: int = 26
+const SIZE: int = 27
 
 @export var items: Array[Item]
 
@@ -17,12 +17,18 @@ func _init() -> void:
 	for slot in SIZE:
 		items.append(Item.new(""))
 	pass
+	print(items.size())
 func get_item(index: int) -> Item:
 	return items.get(index)
 
 func add_item(item: Item):
-	for i in SIZE:
+	for i in items.size():
+		print(i)
+		print((" - " + items.get(i).name))
+		print(items.size())
+		
 		if items.get(i).name == "":
 			items.set(i, item)
+			
 			return
 	
