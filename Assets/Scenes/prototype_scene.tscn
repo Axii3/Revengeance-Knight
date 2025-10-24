@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=4 uid="uid://0dy527qun08k"]
+[gd_scene load_steps=47 format=4 uid="uid://0dy527qun08k"]
 
 [ext_resource type="PackedScene" uid="uid://dv4lm0kcvab24" path="res://assets/player_character/player_character.tscn" id="1_ubtnu"]
 [ext_resource type="Resource" uid="uid://bjt0kw1xc02hb" path="res://assets/Items/iron_axe.tres" id="2_1d5nw"]
@@ -7,7 +7,7 @@
 [ext_resource type="Resource" uid="uid://cf41uq0gjs6ld" path="res://assets/Items/bubatz.tres" id="3_adhv8"]
 [ext_resource type="Script" uid="uid://tpfc6vifdgok" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="4_oagnb"]
 [ext_resource type="Texture2D" uid="uid://5pys2i0hfj7m" path="res://assets/scenes/prototype_scene_slot1_albedo_bump.png" id="6_qnak0"]
-[ext_resource type="Texture2D" uid="uid://c4wm5ycds18a1" path="res://assets/textures/forest_ground_mixed.png" id="7_75vcf"]
+[ext_resource type="Texture2D" uid="uid://c3j23s33h2fhi" path="res://assets/textures/Grass_12-512x512.png" id="7_4h4lu"]
 [ext_resource type="Texture2D" uid="uid://ppnue311m2pi" path="res://assets/scenes/prototype_scene_slot1_normal_roughness.png" id="8_i71sc"]
 [ext_resource type="Texture2D" uid="uid://bh1bmbvyc64td" path="res://assets/textures/Dirt_03-512x512.png" id="9_4h4lu"]
 [ext_resource type="Script" uid="uid://ckcyepfk0sgrl" path="res://addons/zylann.hterrain/hterrain_detail_layer.gd" id="9_phn52"]
@@ -26,11 +26,12 @@
 [ext_resource type="FontFile" uid="uid://d4hiusep38mxq" path="res://assets/fonts/BlackFlag.ttf" id="21_8tu7u"]
 [ext_resource type="Script" uid="uid://d0h324qlbqt2h" path="res://assets/scripts/interactive.gd" id="22_krt3k"]
 [ext_resource type="Script" uid="uid://wnmgkq1tr3wr" path="res://assets/scripts/inventory_ui.gd" id="24_reaq6"]
+[ext_resource type="AudioStream" uid="uid://boiu11dyubuk8" path="res://assets/SFX/Music/RevengenceKnight2.mp3" id="27_oqq1n"]
 
 [sub_resource type="Resource" id="Resource_gy30a"]
 script = ExtResource("4_oagnb")
 mode = 0
-textures = [[ExtResource("7_75vcf"), ExtResource("6_qnak0"), ExtResource("9_4h4lu")], [ExtResource("10_4h4lu"), ExtResource("8_i71sc"), ExtResource("12_75vcf")]]
+textures = [[ExtResource("7_4h4lu"), ExtResource("6_qnak0"), ExtResource("9_4h4lu")], [ExtResource("10_4h4lu"), ExtResource("8_i71sc"), ExtResource("12_75vcf")]]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_p1687"]
 size = Vector3(18.1729, 27.0132, 68.1592)
@@ -984,3 +985,8 @@ mouse_filter = 2
 theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 0
 columns = 9
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("27_oqq1n")
+autoplay = true
+parameters/looping = true
