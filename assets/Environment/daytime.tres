@@ -8,5 +8,7 @@ sky = ExtResource("1_34fy7")
 ssao_enabled = true
 ssao_intensity = 5.0
 fog_enabled = true
+fog_sun_scatter = 0.05
 fog_density = 0.005
 fog_aerial_perspective = 1.0
+fog_height = -1024.0

@@ -26,4 +26,8 @@ func add_item(item: Item):
 			items.set(i, item)
 			
 			return
+func swap_item(item1:int, item2:int):
+	var temp_item: Item = get_item(item1)
+	items[item1] = get_item(item2)
+	items[item2] = temp_item
 	

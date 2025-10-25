@@ -50,11 +50,16 @@ func close_inventory():
 	inventory_slots.clear()
 
 func select_slot(slot: int):
-	selector.show()
-	selected_slot = slot
-	selector.global_position = inventory_slots.get(slot).global_position
-	print(selected_slot)
-	print(inventory.get_item(selected_slot).name)
+	if selected_slot != -1:
+		inventory.swap_item(selected_slot, slot)
+		unselect()
+		update()
+	else:
+		selector.show()
+		selected_slot = slot
+		selector.global_position = inventory_slots.get(slot).global_position
+		print(selected_slot)
+		print(inventory.get_item(selected_slot).name)
 	pass
 
 func unselect():
