@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://o3rp4ipn8lmr"]
-
-[ext_resource type="Script" uid="uid://plb2jwotf1wp" path="res://assets/Items/item.gd" id="1_ik6g6"]
-
-[resource]
-script = ExtResource("1_ik6g6")
-name = "Bread"
-metadata/_custom_type_script = "uid://plb2jwotf1wp"

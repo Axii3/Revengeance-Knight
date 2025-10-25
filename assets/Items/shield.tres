@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://0226jg171onv"]
+
+[ext_resource type="Texture2D" uid="uid://letl7ey87cu6" path="res://assets/textures/items/shield_icon.png" id="1_q8upt"]
+[ext_resource type="Script" uid="uid://plb2jwotf1wp" path="res://assets/Items/item.gd" id="1_wf7b5"]
+
+[resource]
+script = ExtResource("1_wf7b5")
+name = "Shield"
+icon = ExtResource("1_q8upt")
+description = "A classic shield"
+metadata/_custom_type_script = "uid://plb2jwotf1wp"

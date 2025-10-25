@@ -1,10 +1,11 @@
 [gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bjt0kw1xc02hb"]
 
-[ext_resource type="Script" path="res://assets/Items/item.gd" id="1_bral8"]
+[ext_resource type="Script" uid="uid://plb2jwotf1wp" path="res://assets/Items/item.gd" id="1_bral8"]
 [ext_resource type="Texture2D" uid="uid://tx3mi5l3itgx" path="res://assets/textures/items/iron_axe_icon.png" id="1_l5kbv"]
 
 [resource]
 script = ExtResource("1_bral8")
 name = "Iron Axe"
 icon = ExtResource("1_l5kbv")
+description = "A classic axe made of iron for chopping wood or humans"
 metadata/_custom_type_script = "uid://plb2jwotf1wp"

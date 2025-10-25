@@ -3,7 +3,7 @@ class_name InventoryUI
 
 @onready var item_slot = preload("res://assets/scenes/item_slot.tscn")
 
-@onready var grid = $inventory/grid
+@onready var grid = $inventory/backpack_slots/grid
 @onready var inventory_overlay = $inventory
 @onready var selector = $inventory/Selector
 
@@ -20,6 +20,7 @@ const SLOT_WIDTH = 128
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	unselect()
+	close_inventory()
 	pass # Replace with function body.
 
 

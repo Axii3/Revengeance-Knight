@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://bgopeis8sp3fr"]
-
-[ext_resource type="Script" uid="uid://plb2jwotf1wp" path="res://assets/Items/item.gd" id="1_yms86"]
-
-[resource]
-script = ExtResource("1_yms86")
-name = "Amulet of Strength"
-metadata/_custom_type_script = "uid://plb2jwotf1wp"

@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=4 uid="uid://b4niib4s523mm"]
 
 [ext_resource type="Material" uid="uid://cmse15c3jyh8c" path="res://assets/materials/material_wood.tres" id="1_p3x7t"]
-[ext_resource type="FontFile" uid="uid://d4hiusep38mxq" path="res://assets/fonts/BlackFlag.ttf" id="2_btxw3"]
+[ext_resource type="FontFile" uid="uid://bmmyf48q5cj8l" path="res://assets/fonts/Becker.ttf" id="2_nfsq4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mayah"]
 resource_name = "material_sign"
@@ -110,7 +110,8 @@ albedo_color = Color(0, 0, 0, 1)
 [sub_resource type="TextMesh" id="TextMesh_1y28j"]
 material = SubResource("StandardMaterial3D_4p0s4")
 text = "Atzendorfburg"
-font = ExtResource("2_btxw3")
+font = ExtResource("2_nfsq4")
+font_size = 23
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_c4ie8"]
 _surfaces = [{

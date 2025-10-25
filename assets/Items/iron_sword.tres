@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://c74s6fpxgjcy8"]
+
+[ext_resource type="Script" uid="uid://plb2jwotf1wp" path="res://assets/Items/item.gd" id="1_bral8"]
+
+[resource]
+script = ExtResource("1_bral8")
+name = "Iron Sword"
+metadata/_custom_type_script = "uid://plb2jwotf1wp"

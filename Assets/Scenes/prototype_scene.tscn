@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=4 uid="uid://0dy527qun08k"]
+[gd_scene load_steps=55 format=4 uid="uid://0dy527qun08k"]
 
 [ext_resource type="PackedScene" uid="uid://dv4lm0kcvab24" path="res://assets/player_character/player_character.tscn" id="1_ubtnu"]
 [ext_resource type="Resource" uid="uid://bjt0kw1xc02hb" path="res://assets/Items/iron_axe.tres" id="2_1d5nw"]
@@ -24,14 +24,16 @@
 [ext_resource type="PackedScene" uid="uid://dnjoh0k0umes7" path="res://assets/scenes/castle_kit/wall_segment.tscn" id="17_7qqfl"]
 [ext_resource type="PackedScene" uid="uid://lvcrl0bxu5vk" path="res://assets/scenes/castle_kit/door.tscn" id="19_87el7"]
 [ext_resource type="Material" uid="uid://cmse15c3jyh8c" path="res://assets/materials/material_wood.tres" id="20_i0w7p"]
-[ext_resource type="FontFile" uid="uid://d4hiusep38mxq" path="res://assets/fonts/BlackFlag.ttf" id="21_8tu7u"]
 [ext_resource type="Script" uid="uid://d0h324qlbqt2h" path="res://assets/scripts/interactive.gd" id="22_krt3k"]
 [ext_resource type="Script" uid="uid://wnmgkq1tr3wr" path="res://assets/scripts/inventory_ui.gd" id="24_reaq6"]
 [ext_resource type="AudioStream" uid="uid://dnloa00ctxwyr" path="res://assets/SFX/Music/RevengenceKnight2.mp3" id="27_oqq1n"]
 [ext_resource type="AudioStream" uid="uid://1g0pb1ba8amb" path="res://assets/SFX/Ambient/Birds and Wind - Ambient.ogg" id="29_41cia"]
 [ext_resource type="Script" uid="uid://plb2jwotf1wp" path="res://assets/Items/item.gd" id="29_78dnv"]
+[ext_resource type="Resource" uid="uid://0226jg171onv" path="res://assets/Items/shield.tres" id="30_78dnv"]
 [ext_resource type="Texture2D" uid="uid://ck37em0wihlv6" path="res://assets/textures/UI/Selector.png" id="30_a32ex"]
+[ext_resource type="FontFile" uid="uid://bmmyf48q5cj8l" path="res://assets/fonts/Becker.ttf" id="30_qc00r"]
 [ext_resource type="Resource" uid="uid://b23r6yik7e7co" path="res://assets/Items/iron_bar.tres" id="30_y8r80"]
+[ext_resource type="FontFile" uid="uid://cbac7pctp4tpi" path="res://assets/fonts/Canterbury.ttf" id="31_78dnv"]
 
 [sub_resource type="Resource" id="Resource_gy30a"]
 script = ExtResource("4_oagnb")
@@ -148,7 +150,8 @@ albedo_color = Color(0, 0, 0, 1)
 [sub_resource type="TextMesh" id="TextMesh_1y28j"]
 material = SubResource("StandardMaterial3D_4p0s4")
 text = "Atzendorfburg"
-font = ExtResource("21_8tu7u")
+font = ExtResource("30_qc00r")
+font_size = 23
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_c4ie8"]
 _surfaces = [{
@@ -258,6 +261,10 @@ shader_parameter/threshold_color = Vector3(1, 1, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_s026u"]
 material = SubResource("ShaderMaterial_hmxlg")
+
+[sub_resource type="LabelSettings" id="LabelSettings_kod70"]
+font = ExtResource("31_78dnv")
+font_size = 30
 
 [node name="PrototypeScene" type="Node3D"]
 
@@ -966,22 +973,104 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("24_reaq6")
-random_item_list = Array[ExtResource("29_78dnv")]([ExtResource("2_1d5nw"), ExtResource("30_y8r80")])
+random_item_list = Array[ExtResource("29_78dnv")]([ExtResource("2_1d5nw"), ExtResource("30_y8r80"), ExtResource("30_78dnv")])
 
-[node name="inventory" type="ColorRect" parent="InventoryUI"]
+[node name="inventory" type="Control" parent="InventoryUI"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 64.0
-offset_top = 512.0
-offset_right = -64.0
-offset_bottom = -64.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0.6)
 
-[node name="grid" type="GridContainer" parent="InventoryUI/inventory"]
+[node name="Button" type="Button" parent="InventoryUI/inventory"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -32.0
+offset_right = 128.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Add Random Item"
+
+[node name="item_info" type="ColorRect" parent="InventoryUI/inventory"]
+layout_mode = 1
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 405.0
+offset_bottom = 448.0
+color = Color(0, 0, 0, 1)
+
+[node name="Description" type="Label" parent="InventoryUI/inventory/item_info"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 96.0
+offset_right = 309.0
+offset_bottom = 603.0
+text = "A sturdy iron axe
+
+This is a sample text
+here will be  the description of the items"
+label_settings = SubResource("LabelSettings_kod70")
+autowrap_mode = 3
+
+[node name="Name" type="Label" parent="InventoryUI/inventory/item_info"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 309.0
+offset_bottom = 96.0
+text = "Iron Axe"
+label_settings = SubResource("LabelSettings_kod70")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="character_info" type="ColorRect" parent="InventoryUI/inventory"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -170.5
+offset_top = 64.0
+offset_right = 170.5
+offset_bottom = 448.0
+grow_horizontal = 2
+color = Color(0, 0, 0, 1)
+
+[node name="equipped_slots" type="ColorRect" parent="InventoryUI/inventory"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -405.0
+offset_top = 64.0
+offset_right = -63.999878
+offset_bottom = 448.0
+grow_horizontal = 0
+color = Color(0, 0, 0, 1)
+
+[node name="backpack_slots" type="ColorRect" parent="InventoryUI/inventory"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -576.0
+offset_top = -448.0
+offset_right = 576.0
+offset_bottom = -64.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0, 0, 0, 1)
+
+[node name="grid" type="GridContainer" parent="InventoryUI/inventory/backpack_slots"]
 layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 384.0
@@ -1003,14 +1092,6 @@ patch_margin_left = 16
 patch_margin_top = 16
 patch_margin_right = 16
 patch_margin_bottom = 16
-
-[node name="Button" type="Button" parent="InventoryUI/inventory"]
-layout_mode = 0
-offset_left = 448.0
-offset_top = -256.0
-offset_right = 704.0
-offset_bottom = -128.0
-text = "Add Random Item"
 
 [node name="Ambience" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("29_41cia")
