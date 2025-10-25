@@ -29,17 +29,20 @@ func _process(delta: float) -> void:
 
 func create_inventory():
 	inventory_overlay.show()
-	for slot in inventory.SIZE:
+	for slot in inventory.SIZE + 1:
+
+		var new_slot = item_slot.instantiate()
+		grid.add_child(new_slot)
+		new_slot.custom_minimum_size.x = SLOT_WIDTH
+		new_slot.custom_minimum_size.y = SLOT_WIDTH
 		if inventory.get_item(slot).name != "":
-			var new_slot = item_slot.instantiate()
-			grid.add_child(new_slot)
-			new_slot.custom_minimum_size.x = SLOT_WIDTH
-			new_slot.custom_minimum_size.y = SLOT_WIDTH
 			new_slot.icon = inventory.get_item(slot).icon
-			new_slot.inventory_position = slot
-			new_slot.inventory_ui = $"."
-			inventory_slots.append(new_slot)
-			new_slot.update()
+		else:
+			new_slot.icon = null
+		new_slot.inventory_position = slot
+		new_slot.inventory_ui = $"."
+		inventory_slots.append(new_slot)
+		new_slot.update()
 		
 
 
@@ -55,11 +58,12 @@ func select_slot(slot: int):
 		unselect()
 		update()
 	else:
-		selector.show()
-		selected_slot = slot
-		selector.global_position = inventory_slots.get(slot).global_position
-		print(selected_slot)
-		print(inventory.get_item(selected_slot).name)
+		if inventory.get_item(slot).name != "":
+			selector.show()
+			selected_slot = slot
+			selector.global_position = inventory_slots.get(slot).global_position
+			print(selected_slot)
+			print(inventory.get_item(selected_slot).name)
 	pass
 
 func unselect():

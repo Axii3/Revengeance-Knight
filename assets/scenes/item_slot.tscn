@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://blpoilpf4lhbm"]
 
-[ext_resource type="Script" path="res://assets/scripts/item_slot.gd" id="1_a03tp"]
+[ext_resource type="Script" uid="uid://b5q3sek0yrqmb" path="res://assets/scripts/item_slot.gd" id="1_a03tp"]
 [ext_resource type="Texture2D" uid="uid://tx3mi5l3itgx" path="res://assets/textures/items/iron_axe_icon.png" id="2_a03tp"]
 
 [node name="ItemSlot" type="Control"]
