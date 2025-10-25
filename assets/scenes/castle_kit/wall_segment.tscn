@@ -6,7 +6,8 @@
 resource_name = "material_brick"
 cull_mode = 2
 albedo_texture = ExtResource("1_a8fwu")
-roughness = 0.5
+metallic_specular = 0.0
+roughness = 0.0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_767og"]
 _surfaces = [{

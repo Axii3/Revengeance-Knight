@@ -10,7 +10,7 @@ load_path = "res://.godot/imported/stone_wall.png-68a19488bf8f1f5b350f7c16a03ada
 resource_name = "material_brick"
 cull_mode = 2
 albedo_texture = SubResource("CompressedTexture2D_6opi8")
-roughness = 0.5
+metallic_specular = 0.0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_mpvpa"]
 _surfaces = [{

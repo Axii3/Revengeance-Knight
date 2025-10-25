@@ -8,13 +8,14 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 128.0
 offset_bottom = 128.0
-mouse_filter = 2
+mouse_filter = 1
 script = ExtResource("1_a03tp")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
 offset_right = 128.0
 offset_bottom = 128.0
-mouse_filter = 2
 texture = ExtResource("2_a03tp")
 expand_mode = 2
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

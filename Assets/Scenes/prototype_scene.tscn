@@ -1,10 +1,9 @@
-[gd_scene load_steps=47 format=4 uid="uid://0dy527qun08k"]
+[gd_scene load_steps=52 format=4 uid="uid://0dy527qun08k"]
 
 [ext_resource type="PackedScene" uid="uid://dv4lm0kcvab24" path="res://assets/player_character/player_character.tscn" id="1_ubtnu"]
 [ext_resource type="Resource" uid="uid://bjt0kw1xc02hb" path="res://assets/Items/iron_axe.tres" id="2_1d5nw"]
 [ext_resource type="Script" uid="uid://cnkq40vbx82o2" path="res://addons/zylann.hterrain/hterrain.gd" id="2_vr7vr"]
 [ext_resource type="Resource" uid="uid://up7tae3tnipd" path="res://hterrain/data.hterrain" id="3_2poe4"]
-[ext_resource type="Resource" uid="uid://cf41uq0gjs6ld" path="res://assets/Items/bubatz.tres" id="3_adhv8"]
 [ext_resource type="Script" uid="uid://tpfc6vifdgok" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="4_oagnb"]
 [ext_resource type="Texture2D" uid="uid://5pys2i0hfj7m" path="res://assets/scenes/prototype_scene_slot1_albedo_bump.png" id="6_qnak0"]
 [ext_resource type="Texture2D" uid="uid://c3j23s33h2fhi" path="res://assets/textures/Grass_12-512x512.png" id="7_4h4lu"]
@@ -13,10 +12,12 @@
 [ext_resource type="Script" uid="uid://ckcyepfk0sgrl" path="res://addons/zylann.hterrain/hterrain_detail_layer.gd" id="9_phn52"]
 [ext_resource type="Texture2D" uid="uid://dchoajo6qne2e" path="res://assets/textures/forest_ground_mixed_n.png" id="10_4h4lu"]
 [ext_resource type="Texture2D" uid="uid://cgi4xx38sjydl" path="res://assets/textures/Foliage/grass_foliage.png" id="10_exev5"]
+[ext_resource type="Texture2D" uid="uid://w3u5ebe3655x" path="res://assets/textures/Cobblestone_high_res.png" id="10_rcuyu"]
 [ext_resource type="Texture2D" uid="uid://6jmdwj3vn6m0" path="res://addons/zylann.hterrain/tools/icons/icon_detail_layer_node.svg" id="11_618uj"]
 [ext_resource type="Texture2D" uid="uid://bdwfksclvh233" path="res://assets/textures/prototype_scene_slot0_normal_roughness.png" id="12_75vcf"]
 [ext_resource type="PackedScene" uid="uid://b4niib4s523mm" path="res://assets/props/sign.tscn" id="12_oqvr1"]
 [ext_resource type="PackedScene" uid="uid://dxdiny6ctow3c" path="res://assets/props/Nature/trees/pine_tree.tscn" id="13_y3w2y"]
+[ext_resource type="Texture2D" uid="uid://c4oa80oie1q8e" path="res://assets/textures/Cobblestone_normal.png" id="14_41cia"]
 [ext_resource type="Environment" uid="uid://ewet5ruo32e" path="res://assets/Environment/daytime.tres" id="16_4h4lu"]
 [ext_resource type="PackedScene" uid="uid://5vmi1wgoefim" path="res://assets/scenes/castle_kit/tower_segment.tscn" id="16_8bsq2"]
 [ext_resource type="PackedScene" uid="uid://djb5jn33c8jdk" path="res://assets/scenes/castle_kit/gate_segment.tscn" id="16_c6rqr"]
@@ -26,12 +27,16 @@
 [ext_resource type="FontFile" uid="uid://d4hiusep38mxq" path="res://assets/fonts/BlackFlag.ttf" id="21_8tu7u"]
 [ext_resource type="Script" uid="uid://d0h324qlbqt2h" path="res://assets/scripts/interactive.gd" id="22_krt3k"]
 [ext_resource type="Script" uid="uid://wnmgkq1tr3wr" path="res://assets/scripts/inventory_ui.gd" id="24_reaq6"]
-[ext_resource type="AudioStream" uid="uid://boiu11dyubuk8" path="res://assets/SFX/Music/RevengenceKnight2.mp3" id="27_oqq1n"]
+[ext_resource type="AudioStream" uid="uid://dnloa00ctxwyr" path="res://assets/SFX/Music/RevengenceKnight2.mp3" id="27_oqq1n"]
+[ext_resource type="AudioStream" uid="uid://1g0pb1ba8amb" path="res://assets/SFX/Ambient/Birds and Wind - Ambient.ogg" id="29_41cia"]
+[ext_resource type="Script" uid="uid://plb2jwotf1wp" path="res://assets/Items/item.gd" id="29_78dnv"]
+[ext_resource type="Texture2D" uid="uid://ck37em0wihlv6" path="res://assets/textures/UI/Selector.png" id="30_a32ex"]
+[ext_resource type="Resource" uid="uid://b23r6yik7e7co" path="res://assets/Items/iron_bar.tres" id="30_y8r80"]
 
 [sub_resource type="Resource" id="Resource_gy30a"]
 script = ExtResource("4_oagnb")
 mode = 0
-textures = [[ExtResource("7_4h4lu"), ExtResource("6_qnak0"), ExtResource("9_4h4lu")], [ExtResource("10_4h4lu"), ExtResource("8_i71sc"), ExtResource("12_75vcf")]]
+textures = [[ExtResource("7_4h4lu"), ExtResource("6_qnak0"), ExtResource("9_4h4lu"), ExtResource("10_rcuyu")], [ExtResource("10_4h4lu"), ExtResource("8_i71sc"), ExtResource("12_75vcf"), ExtResource("14_41cia")]]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_p1687"]
 size = Vector3(18.1729, 27.0132, 68.1592)
@@ -259,8 +264,6 @@ material = SubResource("ShaderMaterial_hmxlg")
 [node name="PlayerCharacter" parent="." instance=ExtResource("1_ubtnu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 249.185, -4.34028, 129.385)
 visible = false
-prot_item = ExtResource("2_1d5nw")
-prot_item_2 = ExtResource("3_adhv8")
 metadata/_edit_group_ = true
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
@@ -963,6 +966,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("24_reaq6")
+random_item_list = Array[ExtResource("29_78dnv")]([ExtResource("2_1d5nw"), ExtResource("30_y8r80")])
 
 [node name="inventory" type="ColorRect" parent="InventoryUI"]
 layout_mode = 1
@@ -986,7 +990,36 @@ theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 0
 columns = 9
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="Selector" type="Control" parent="InventoryUI/inventory"]
+anchors_preset = 0
+
+[node name="Panel" type="NinePatchRect" parent="InventoryUI/inventory/Selector"]
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 128.0
+texture = ExtResource("30_a32ex")
+region_rect = Rect2(0, 0, 128, 128)
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+
+[node name="Button" type="Button" parent="InventoryUI/inventory"]
+layout_mode = 0
+offset_left = 448.0
+offset_top = -256.0
+offset_right = 704.0
+offset_bottom = -128.0
+text = "Add Random Item"
+
+[node name="Ambience" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("29_41cia")
+autoplay = true
+parameters/looping = true
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("27_oqq1n")
 autoplay = true
 parameters/looping = true
+
+[connection signal="button_down" from="InventoryUI/inventory/Button" to="InventoryUI" method="_on_button_button_down"]
