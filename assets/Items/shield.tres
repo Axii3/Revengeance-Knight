@@ -7,5 +7,5 @@
 script = ExtResource("1_wf7b5")
 name = "Shield"
 icon = ExtResource("1_q8upt")
-description = "A classic shield"
+description = "A classic shield, protecting the wielder in combat."
 metadata/_custom_type_script = "uid://plb2jwotf1wp"

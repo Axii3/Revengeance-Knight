@@ -5,6 +5,7 @@
 
 [resource]
 script = ExtResource("1_5a4ak")
-name = "iron_bar"
+name = "Iron Bar"
 icon = ExtResource("1_1xp32")
+description = "An iron bar, commonly used by blacksmiths to craft iron gear"
 metadata/_custom_type_script = "uid://plb2jwotf1wp"

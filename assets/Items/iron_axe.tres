@@ -7,5 +7,5 @@
 script = ExtResource("1_bral8")
 name = "Iron Axe"
 icon = ExtResource("1_l5kbv")
-description = "A classic axe made of iron for chopping wood or humans"
+description = "A classic axe made of iron. Can be used in combat"
 metadata/_custom_type_script = "uid://plb2jwotf1wp"

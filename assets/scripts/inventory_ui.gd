@@ -7,6 +7,9 @@ class_name InventoryUI
 @onready var inventory_overlay = $inventory
 @onready var selector = $inventory/Selector
 
+@onready var name_display = $inventory/item_info/Name
+@onready var description_display = $inventory/item_info/Description
+
 @export var random_item_list: Array[Item]
 
 var inventory: Inventory
@@ -58,13 +61,13 @@ func select_slot(slot: int):
 		inventory.swap_item(selected_slot, slot)
 		unselect()
 		update()
+		set_text_display(Item.new(""))
 	else:
 		if inventory.get_item(slot).name != "":
 			selector.show()
 			selected_slot = slot
 			selector.global_position = inventory_slots.get(slot).global_position
-			print(selected_slot)
-			print(inventory.get_item(selected_slot).name)
+			set_text_display(inventory.get_item(slot))
 	pass
 
 func unselect():
@@ -81,6 +84,10 @@ func update():
 		slot.queue_free()
 	inventory_slots.clear()
 	create_inventory()
+
+func set_text_display(item: Item):
+	description_display.text = item.description
+	name_display.text = item.name
 
 func _on_button_button_down() -> void:
 	add_random_item()
