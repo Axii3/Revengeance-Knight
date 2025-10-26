@@ -133,7 +133,6 @@ font_size = 40
 
 [node name="PlayerCharacter" parent="." instance=ExtResource("1_ubtnu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 249.185, -4.34028, 129.385)
-metadata/_edit_group_ = true
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.0881449, 0.430175, -0.898432, 0.638881, 0.667579, 0.382322, 0.764239, -0.607691, -0.215987, 267.952, 24.1979, 136.71)
@@ -878,9 +877,9 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -405.0
+offset_left = -448.0
 offset_top = 64.0
-offset_right = -63.999878
+offset_right = -64.0
 offset_bottom = 448.0
 grow_horizontal = 0
 color = Color(0, 0, 0, 1)

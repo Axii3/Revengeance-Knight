@@ -14,7 +14,6 @@ class_name InventoryUI
 
 var inventory: Inventory
 
-
 var inventory_slots: Array[Control]
 var selected_slot: int
 

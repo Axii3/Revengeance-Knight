@@ -18,8 +18,7 @@ var weapon_equipped: bool = true
 @onready var inventory_ui = $"../InventoryUI"
 
 @onready var animation_player = $Head/Camera3D/Hands/AnimationPlayer
-@onready var weapon_animation = $Head/Camera3D/Axe_FPS2/AnimationPlayer
-@onready var weapon_mesh = $Head/Camera3D/Axe_FPS2
+@onready var weapon_mesh = $Head/Camera3D/Hands/rig/Skeleton3D/hand_ik_R/Hand/Node3D/Iron_Axe
 
 var inventory : Inventory = Inventory.new()
 
@@ -46,7 +45,6 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("Attack") and !disable_control:
 		if weapon_equipped:
 			animation_player.current_animation = "Axe Attack"
-			weapon_animation.current_animation = "Axe Attack"
 		else:
 			animation_player.current_animation = "Punch"
 	

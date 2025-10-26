@@ -1,10 +1,13 @@
 extends Control
 
+class_name ItemSlot
+
 var icon: Texture2D
 @onready var texture_rect = $TextureRect
 
 var inventory_ui: InventoryUI
 var inventory_position: int
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
