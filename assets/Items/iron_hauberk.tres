@@ -5,5 +5,5 @@
 [resource]
 script = ExtResource("1_ps2vv")
 name = "Iron Hauberk"
-description = "A classic hauberk made of iron chainmail. It is solid metal Gear!"
+description = "A classic hauberk made of iron chainmail. This metal gear is pretty solid."
 metadata/_custom_type_script = "uid://plb2jwotf1wp"
