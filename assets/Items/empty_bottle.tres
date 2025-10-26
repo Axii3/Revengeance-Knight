@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bcoavihkswp20"]
+
+[ext_resource type="Texture2D" uid="uid://dcsshqal5nuk1" path="res://assets/textures/items/potions/empty_flask_icon.png" id="1_lckon"]
+[ext_resource type="Script" uid="uid://plb2jwotf1wp" path="res://assets/Items/item.gd" id="1_xhxvd"]
+
+[resource]
+script = ExtResource("1_xhxvd")
+name = "Empty Bottle"
+icon = ExtResource("1_lckon")
+description = "An empty bottle of nothing."
+metadata/_custom_type_script = "uid://plb2jwotf1wp"

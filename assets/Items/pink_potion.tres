@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://4ggnsj6oxyi7"]
+
+[ext_resource type="Script" uid="uid://plb2jwotf1wp" path="res://assets/Items/item.gd" id="1_0ajso"]
+[ext_resource type="Texture2D" uid="uid://dxg36vouly1d1" path="res://assets/textures/items/potions/Pink_flask_icon.png" id="1_qgb5x"]
+
+[resource]
+script = ExtResource("1_0ajso")
+name = "Pink Potion"
+icon = ExtResource("1_qgb5x")
+description = "Yippie!!"
+metadata/_custom_type_script = "uid://plb2jwotf1wp"

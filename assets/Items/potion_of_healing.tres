@@ -1,8 +1,11 @@
-[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://cnmhjfs8u0fdw"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cnmhjfs8u0fdw"]
 
 [ext_resource type="Script" uid="uid://plb2jwotf1wp" path="res://assets/Items/item.gd" id="1_klm7q"]
+[ext_resource type="Texture2D" uid="uid://btoh3m6jp0ebs" path="res://assets/textures/items/potions/magenta_flask_icon.png" id="1_soolh"]
 
 [resource]
 script = ExtResource("1_klm7q")
 name = "Potion of Healing"
+icon = ExtResource("1_soolh")
+description = "Most people find the taste repulsive but it keeps you alive."
 metadata/_custom_type_script = "uid://plb2jwotf1wp"

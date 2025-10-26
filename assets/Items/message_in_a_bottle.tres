@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://x0731t2kn2t2"]
+
+[ext_resource type="Script" uid="uid://plb2jwotf1wp" path="res://assets/Items/item.gd" id="1_jy2d2"]
+[ext_resource type="Texture2D" uid="uid://d0qvbxybgyb1k" path="res://assets/textures/items/message_in_a_bottle_icon.png" id="1_of25e"]
+
+[resource]
+script = ExtResource("1_jy2d2")
+name = "Message in a Bottle"
+icon = ExtResource("1_of25e")
+description = "Sending out an S.O.S"
+metadata/_custom_type_script = "uid://plb2jwotf1wp"
