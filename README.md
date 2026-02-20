@@ -1,6 +1,6 @@
 # Revengeance Knight
  
-This is a little Game I worked on.
+This is a little Game I worked on since 2024.
 
 I don't plan on updating it any further.
 
